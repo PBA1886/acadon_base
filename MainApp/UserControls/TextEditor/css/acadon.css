@@ -1,0 +1,124 @@
+#controlAddIn {
+    padding: 8px;
+}
+
+:root {
+    font-size: 14pt;
+}
+
+.note-editable, #summernote {
+    font-size: 14pt !important;
+    font-family: Arial;
+    line-height: normal !important;
+}
+
+/* background-color is ignored in RDLC - remove summernote background color palette */
+/* remove top and bottom padding */
+.note-color .dropdown-menu {
+    min-width: 168px !important;
+    padding: 0;
+}
+/* hide background color picker */
+.note-color .note-palette:first-child {
+    display: none !important;
+}
+/* remove palette title */
+.note-color .note-palette-title {
+    display: none;
+}
+.note-icon-font .note-recent-color {
+    background-color: transparent !important;
+}
+
+iif:hover {
+    border-bottom: 1px dotted black;
+}
+
+iif > iif:hover {
+    border-bottom: 0px dotted black;
+}
+
+
+iif .tooltip {
+    z-index: 1071;
+}
+
+iif > iif .tooltip {
+    z-index: 1072;
+}
+
+iif > iif > iif .tooltip {
+    z-index: 1073;
+}
+
+iif > iif > iif > iif .tooltip {
+    z-index: 1074;
+}
+
+iif > iif > iif > iif > iif .tooltip {
+    z-index: 1075;
+}
+
+iif + .tooltip > .tooltip-arrow {
+    visibility: hidden;
+}
+
+variable::before {
+    content: attr(var);
+    border-bottom: dotted 1px black;
+}
+
+
+contextmenu {
+    background-color: white;
+    width: 240px;
+    box-shadow: 0 4px 5px 3px rgba(0,0,0,0.2);
+    position: absolute;
+    display: none;
+    z-index: 6;
+    animation: example 0.3s;
+    -moz-animation: example 0.3s;
+    -webkit-animation: example 0.3s;
+}
+
+@keyframes example {
+    from {color: rgba(0, 0, 0, 0);}
+    to {color: rgba(0, 0, 0, 100);}
+}
+
+.menu-options {
+    list-style: none;
+    padding: 10px;
+    animation: example 0.4s;
+    -moz-animation: example 0.4s;
+    -webkit-animation: example 0.4s;
+}
+
+.menu-option {
+    font-weight: 500;
+    font-size: 14px;
+    padding: 5px 40px 5px 20px;
+    cursor: pointer;
+    animation: example 0.5s;
+    -moz-animation: example 0.5s;
+    -webkit-animation: example 0.5s;
+}
+
+.menu-option:hover {
+    background: rgba(0,0,0,0.2);
+    animation: example 0.5s;
+    -moz-animation: example 0.5s;
+    -webkit-animation: example 0.5s;
+}
+
+
+.editorpreview {
+    overflow-y: scroll;
+    height: 573px;
+    width: 320px;
+}
+
+.dropdown-menu {
+    overflow: auto;
+    max-height: 300px;
+}

@@ -1,0 +1,31 @@
+{
+  "id": "d7e05665-2f0b-42dd-b92f-d8a2088d1cf5",
+  "name": "acadon Base",
+  "publisher": "acadon AG",
+  "version": "1.0.0.0",
+  "brief": "This app provides base modules that are used for other acadon apps.",
+  "description": "",
+  "privacyStatement": "",
+  "EULA": "",
+  "help": "",
+  "url": "",
+  "logo": "logo.png",
+  "dependencies": [],
+  "screenshots": [],
+  "platform": "20.0.0.0",
+  "application": "20.0.0.0",
+  "idRanges": [
+    {
+      "from": 5282616,
+      "to": 528261565
+    }
+  ],
+  "resourceExposurePolicy": {
+    "allowDebugging": true,
+    "allowDownloadingSource": true,
+    "includeSourceInSymbolFile": true
+  },
+  "runtime": "9.0",
+  "features": ["TranslationFile"],
+  "applicationInsightsConnectionString": "InstrumentationKey=4b6c913d-1e0e-48e4-968c-e0a249dc1cb5;IngestionEndpoint=https://northeurope-0.in.applicationinsights.azure.com/"
+}

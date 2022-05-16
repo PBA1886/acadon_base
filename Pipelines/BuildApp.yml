@@ -1,0 +1,23 @@
+name: Build App
+resources:
+  repositories:
+  - repository: timberbuildhelper
+    type: git
+    name: acadon_timber/timber.buildhelper
+    ref: 'refs/heads/main'
+  - repository: self
+    checkoutOptions:
+      submodules: false
+
+pool: 
+  name: PM
+
+trigger:
+  branches:
+    include:
+      - main
+
+extends:
+  template: Templates/BuildApp.yml@timberbuildhelper
+  parameters:
+    DownloadTimberApps: false
