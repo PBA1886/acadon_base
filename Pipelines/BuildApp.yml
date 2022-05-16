@@ -4,7 +4,7 @@ resources:
   - repository: timberbuildhelper
     type: git
     name: acadon_timber/timber.buildhelper
-    ref: 'refs/heads/main'
+    ref: 'refs/heads/PrepareFir'
   - repository: self
     checkoutOptions:
       submodules: false
