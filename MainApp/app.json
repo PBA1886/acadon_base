@@ -1,6 +1,6 @@
 {
   "id": "d7e05665-2f0b-42dd-b92f-d8a2088d1cf5",
-  "name": "acadon Base",
+  "name": "acadon_Base",
   "publisher": "acadon AG",
   "version": "1.0.0.0",
   "brief": "This app provides base modules that are used for other acadon apps.",

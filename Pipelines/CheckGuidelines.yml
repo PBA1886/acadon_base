@@ -1,0 +1,26 @@
+name: Build App
+resources:
+  repositories:
+  - repository: timberbuildhelper
+    type: git
+    name: acadon_timber/timber.buildhelper
+    ref: 'refs/heads/PrepareFir'
+  - repository: self
+    checkoutOptions:
+      submodules: false
+
+pool: 
+  name: PM
+
+trigger:
+  branches:
+    include:
+      - main
+
+extends:
+  template: Templates/CheckGuidelines.yml@timberbuildhelper
+  parameters:
+    DownloadTimberApps: false
+    CheckPreviousVersion: true
+    PreviousProject: 92088132-5041-45a5-8659-1c2b245f796e
+    PreviousPipelineId: 753
