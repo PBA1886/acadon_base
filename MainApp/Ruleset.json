@@ -2,5 +2,35 @@
     "name": "Timber Solution Rules",
     "description": "These rules must be respected by all the AL code written for the timber solution. For more information about the rules, see https://docs.microsoft.com/en-us/dynamics365/business-central/dev-itpro/developer/analyzers/codecop",
     "rules": [
+        {
+            "id": "PTE0001",
+            "action": "Hidden",
+            "justification": "Do not check for PTE ID Ranges"
+        },
+        {
+            "id": "PTE0002",
+            "action": "Hidden",
+            "justification": "Do not check for PTE ID Ranges"
+        },
+        {
+            "id": "PTE0005",
+            "action": "Hidden",
+            "justification": "Do not check for PTE Target"
+        },
+        {
+            "id": "PTE0009",
+            "action": "Hidden",
+            "justification": "Do not check PTE app.json properties"
+        },
+        {
+            "id": "AS0051",
+            "action": "Hidden",
+            "justification": "Need to be checked later"
+        },
+        {
+            "id": "AS0052",
+            "action": "Hidden",
+            "justification": "Need to be checked later"
+        }
     ]
 }
