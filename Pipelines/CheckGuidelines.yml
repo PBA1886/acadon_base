@@ -12,10 +12,7 @@ resources:
 pool: 
   name: PM
 
-trigger:
-  branches:
-    include:
-      - main
+trigger: none
 
 extends:
   template: Templates/CheckGuidelines.yml@timberbuildhelper
