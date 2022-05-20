@@ -129,8 +129,11 @@ page 5282617 "ACA Modules"
     end;
 
     trigger OnOpenPage()
+    var
+        ModuleManagement: Codeunit "ACA Module Management";
     begin
         Rec.UpdateModules();
+        ModuleManagement.SendNotificationIfExperienceIsNotSet();
     end;
 
     local procedure SetIModule()

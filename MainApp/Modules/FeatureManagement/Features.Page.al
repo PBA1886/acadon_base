@@ -138,11 +138,14 @@ page 5282616 "ACA Features"
     trigger OnOpenPage()
     var
         UnknownFeature: Codeunit "ACA Unknown Feature Impl.";
+        FeatureManagement: Codeunit "ACA Feature Management";
     begin
         Rec.UpdateFeatures();
 
         if Rec.IsEmpty() then
             IFeature := UnknownFeature;
+
+        FeatureManagement.SendNotificationIfExperienceIsNotSet();
     end;
 
     local procedure SetIFeature()
