@@ -115,6 +115,31 @@ codeunit 5282632 "ACA Module Management"
             TelemetryScope::ExtensionPublisher, LogDimensionTok, LogValueTok, LogDimension2Tok, IModule.GetName());
     end;
 
+    procedure SendNotificationIfExperienceIsNotSet()
+    var
+        ApplicationAreaMgmtFacade: Codeunit "Application Area Mgmt. Facade";
+        ExperienceTierMissingNotification: Notification;
+        ExperienceTier: Text;
+        ExperienceTierMissingNotificationMsg: Label 'No experience tier selected for the current company. The module management will not work properly without an experience tier.';
+        OpenCompanyInformationActionLbl: Label 'Open Company Information';
+    begin
+        if ApplicationAreaMgmtFacade.GetExperienceTierCurrentCompany(ExperienceTier) then
+            exit;
+
+        ExperienceTierMissingNotification.Message := ExperienceTierMissingNotificationMsg;
+        ExperienceTierMissingNotification.AddAction(OpenCompanyInformationActionLbl, Codeunit::"ACA Feature Management", 'OpenCompanyInformation');
+        ExperienceTierMissingNotification.Send();
+    end;
+
+    procedure OpenCompanyInformation(ExperienceTierMissingNotification: Notification)
+    var
+        CompanyInformation: Record "Company Information";
+        PageManagement: Codeunit "Page Management";
+    begin
+        CompanyInformation.Get();
+        PageManagement.PageRun(CompanyInformation);
+    end;
+
     [IntegrationEvent(false, false)]
     local procedure OnBeforeModuleCanBeInstalled(var IModule: Interface "ACA IModule"; var Result: Boolean; var IsHandled: Boolean)
     begin
