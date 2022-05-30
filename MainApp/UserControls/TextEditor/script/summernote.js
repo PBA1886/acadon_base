@@ -6066,7 +6066,7 @@ var Editor_Editor = /*#__PURE__*/function () {
           var firstSpan = lists.head(spans);
 
           if (firstSpan && !dom.nodeLength(firstSpan)) {
-            firstSpan.innerHTML = dom.ZERO_WIDTH_NBSP_CHAR;
+            // firstSpan.innerHTML = dom.ZERO_WIDTH_NBSP_CHAR; Breaks report printing
             range.createFromNode(firstSpan.firstChild).select();
             this.setLastRange();
             this.$editable.data(KEY_BOGUS, firstSpan);

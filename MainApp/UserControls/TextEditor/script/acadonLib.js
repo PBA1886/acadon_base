@@ -125,6 +125,10 @@ function removeCustomListStyleElements(html, notAllowedListElements) {
     return html.replace(listRegEx, "$1");;
 }
 
+function removeZeroWidthCharacters(html) {
+    return html.replace(/([\u200B]+|[\u200C]+|[\u200D]+|[\u200E]+|[\u200F]+|[\uFEFF]+)/g, '')
+}
+
 function replaceHeaders(html, headerStyleMapping) {
     return html.replace(/<h(\d).*?>(.*?)<\/h\d>/g, function(_,hN,text) {
         var wrap = '<p style="%1" class="header">%2</p>';
@@ -178,6 +182,8 @@ function handleClipboardHtml(html) {
     var bufferText = html;
     bufferText = bufferText.replace(/&nbsp;/g, " ");
 
+    bufferText = removeZeroWidthCharacters(bufferText);
+    
     if (!$.isEmptyObject(Options.headerStyleMapping))
         bufferText = replaceHeaders(bufferText, Options.headerStyleMapping);
 
