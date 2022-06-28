@@ -36,11 +36,6 @@ page 5282617 "ACA Modules"
                     ToolTip = 'Specifies the Name of the Module.';
                     ApplicationArea = All;
                 }
-                field(ModuleCategory; Rec.Category)
-                {
-                    ToolTip = 'Specifies the Category of the Module.';
-                    ApplicationArea = All;
-                }
                 field(ModuleDescription; IModule.GetDescription())
                 {
                     Caption = 'Description';

@@ -21,11 +21,6 @@ table 5282616 "ACA Module"
             Caption = 'Name';
             DataClassification = CustomerContent;
         }
-        field(21; Category; Text[100])
-        {
-            Caption = 'Category';
-            DataClassification = CustomerContent;
-        }
     }
     keys
     {
@@ -99,7 +94,6 @@ table 5282616 "ACA Module"
 
         IModule := Rec.Module;
         Rec.Name := IModule.GetName();
-        Rec.Category := CopyStr(Format(IModule.GetCategory()), 1, MaxStrLen(Rec.Category));
         Rec.Modify();
     end;
 
