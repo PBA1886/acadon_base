@@ -23,11 +23,6 @@ codeunit 5282633 "ACA Unknown Module Impl." implements "ACA IModule"
         exit(UnknownLbl);
     end;
 
-    procedure GetCategory(): Enum "ACA Module Category"
-    begin
-        exit("ACA Module Category"::Unknown);
-    end;
-
     procedure CanBeInstalled(): Boolean
     begin
         exit(false);
