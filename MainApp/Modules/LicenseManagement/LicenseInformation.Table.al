@@ -20,7 +20,6 @@ table 5282617 "ACA License Information"
 
     procedure FromJson(LicenseInfo: JsonObject): Boolean
     var
-        Jmgt: Codeunit "JSON Management";
         JToken: JsonToken;
         AppIdTok: Label 'RowKey', Locked = true;
         TimestampTok: Label 'Timestamp', Locked = true;
