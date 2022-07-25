@@ -17,7 +17,7 @@ codeunit 5282619 "ACA License Management"
     var
         FormatHelper: Codeunit "ACA Format Helper";
         BaseUriTxt: Label 'https://acadonappsourcestorage.table.core.windows.net/', Locked = true;
-        StorageAccount: Label 'acadonappsourcestorage', Locked = true;
+        StorageAccountTxt: Label 'acadonappsourcestorage', Locked = true;
         AzureTableNameTxt: Label 'AppSourceLicensing', Locked = true;
         LicenseExpired: Boolean;
 
@@ -111,7 +111,7 @@ codeunit 5282619 "ACA License Management"
         AddHeader(RequestHeaders, 'Accept', 'application/json;odata=nometadata');
         AddHeader(RequestHeaders, 'DataServiceVersion', '3.0;NetFx');
 
-        TableAPIAuth.Authorize(RequestMsg, StorageAccount);
+        TableAPIAuth.Authorize(RequestMsg, StorageAccountTxt);
 
         if not Client.Send(RequestMsg, Response) then
             exit;
@@ -157,7 +157,7 @@ codeunit 5282619 "ACA License Management"
         AddHeader(ContentHeaders, 'Content-Length', Format(StrLen(PayloadText)));
         RequestMsg.Content(Content);
 
-        TableAPIAuth.Authorize(RequestMsg, StorageAccount);
+        TableAPIAuth.Authorize(RequestMsg, StorageAccountTxt);
 
         if not Client.Send(RequestMsg, Response) then
             exit;
@@ -202,7 +202,7 @@ codeunit 5282619 "ACA License Management"
         AddHeader(ContentHeaders, 'Content-Type', 'application/json');
         AddHeader(ContentHeaders, 'Content-Length', Format(StrLen(PayloadText)));
         RequestMsg.Content(Content);
-        TableAPIAuth.Authorize(RequestMsg, StorageAccount);
+        TableAPIAuth.Authorize(RequestMsg, StorageAccountTxt);
 
         if not Client.Send(RequestMsg, Response) then
             exit(false);
@@ -213,7 +213,6 @@ codeunit 5282619 "ACA License Management"
     local procedure GetResponseAsJsonObject(Repsonse: HttpResponseMessage) ResponseAsJson: JsonObject
     var
         ResponseText: Text;
-        IsActiveToken: JsonToken;
     begin
         if Repsonse.Content.ReadAs(ResponseText) then;
         if ResponseAsJson.ReadFrom(ResponseText) then;

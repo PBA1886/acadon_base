@@ -13,13 +13,10 @@ codeunit 5282620 "ACA Rest Client"
 
     procedure SendRequest(Method: Enum "Http Request Type"; Url: Text; RequestObject: JsonObject; var ResponseMessage: HttpResponseMessage; var ResponseToken: JsonToken) Successful: Boolean
     var
-        ResponseText: Text;
         IsHandled: Boolean;
     begin
         OnBeforeSendRequest(Method, Url, RequestObject, ResponseMessage, ResponseToken, Successful, IsHandled);
-
         DoSendRequest(Method, Url, RequestObject, ResponseMessage, ResponseToken, Successful, IsHandled);
-
         OnAfterSendRequest(Method, Url, RequestObject, ResponseMessage, ResponseToken, Successful);
     end;
 
@@ -73,13 +70,11 @@ codeunit 5282620 "ACA Rest Client"
         IsHandled: Boolean;
     begin
         OnBeforeCreateHttpClient(Client, Content, Request, IsHandled);
-
-        DoCreateHttpClient(Client, Content, Request, IsHandled);
-
+        DoCreateHttpClient(Content, Request, IsHandled);
         OnAfterCreateHttpClient(Client, Content, Request);
     end;
 
-    local procedure DoCreateHttpClient(var Client: HttpClient; var Content: HttpContent; Request: JsonObject; IsHandled: Boolean)
+    local procedure DoCreateHttpClient(var Content: HttpContent; Request: JsonObject; IsHandled: Boolean)
     var
         Headers: HttpHeaders;
         RequestText: Text;

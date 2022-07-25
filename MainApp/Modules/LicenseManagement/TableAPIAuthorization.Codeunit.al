@@ -1,4 +1,4 @@
-codeunit 5282620 "ACA Table API Authorization"
+codeunit 5282634 "ACA Table API Authorization"
 {
     //Copied from System App - Storage Service Authorization.
     //Can be replaced by System App as soon as system app supports Authorization for Azure Table API
