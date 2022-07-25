@@ -1,16 +1,17 @@
 table 5282617 "ACA License Information"
 {
     TableType = Temporary;
+    Access = Internal;
     DataClassification = SystemMetadata;
 
     fields
     {
-        field(1; Id; Guid) { }
-        field(10; Timestamp; DateTime) { }
-        field(20; TestPeriodLength; Integer) { }
-        field(30; IsLicensed; Boolean) { }
-        field(40; NoOfUsers; Integer) { }
-        field(50; NoOfCompanies; Integer) { }
+        field(1; Id; Guid) { Caption = '', Locked = true; }
+        field(10; FirstInstalledAt; Date) { Caption = '', Locked = true; }
+        field(20; TestPeriodLength; Integer) { Caption = '', Locked = true; }
+        field(30; IsLicensed; Boolean) { Caption = '', Locked = true; }
+        field(40; NoOfUsers; Integer) { Caption = '', Locked = true; }
+        field(50; NoOfCompanies; Integer) { Caption = '', Locked = true; }
     }
 
     keys
@@ -20,9 +21,9 @@ table 5282617 "ACA License Information"
 
     procedure FromJson(LicenseInfo: JsonObject): Boolean
     var
-        JToken: JsonToken;
+        JsonManagement: Codeunit "ACA Json Management";
         AppIdTok: Label 'RowKey', Locked = true;
-        TimestampTok: Label 'Timestamp', Locked = true;
+        FirstInstalledAtTok: Label 'FirstInstalledAt', Locked = true;
         TestPeriodLengthTok: Label 'TestPeriodLength', Locked = true;
         IsLicensedTok: Label 'IsLicensed', Locked = true;
         NoOfUsersTok: Label 'NoOfUsers', Locked = true;
@@ -32,75 +33,14 @@ table 5282617 "ACA License Information"
             exit(false);
 
         Rec.Init();
-        if LicenseInfo.Get(AppIdTok, JToken) then
-            Rec.Id := GetText(JToken);
-
-        if LicenseInfo.Get(TimestampTok, JToken) then
-            Rec.Timestamp := GetDateTime(JToken);
-
-        if LicenseInfo.Get(TestPeriodLengthTok, JToken) then
-            Rec.TestPeriodLength := GetInteger(JToken);
-
-        if LicenseInfo.Get(IsLicensedTok, JToken) then
-            Rec.IsLicensed := GetBool(JToken);
-
-        if LicenseInfo.Get(NoOfUsersTok, JToken) then
-            Rec.NoOfUsers := GetInteger(JToken);
-
-        if LicenseInfo.Get(NoOfCompaniesTok, JToken) then
-            Rec.NoOfCompanies := GetInteger(JToken);
-
+        Rec.Id := JsonManagement.GetValueAsText(AppIdTok, LicenseInfo);
+        Rec.FirstInstalledAt := JsonManagement.GetValueAsDate(FirstInstalledAtTok, LicenseInfo);
+        Rec.TestPeriodLength := JsonManagement.GetValueAsInteger(TestPeriodLengthTok, LicenseInfo);
+        Rec.IsLicensed := JsonManagement.GetValueAsBoolean(IsLicensedTok, LicenseInfo);
+        Rec.NoOfUsers := JsonManagement.GetValueAsInteger(NoOfUsersTok, LicenseInfo);
+        Rec.NoOfCompanies := JsonManagement.GetValueAsInteger(NoOfCompaniesTok, LicenseInfo);
         Rec.Insert();
-        exit(true);
+
+        exit(not IsNullGuid(Rec.Id));
     end;
-
-    local procedure GetBool(JToken: JsonToken): Boolean
-    var
-        JValue: JsonValue;
-    begin
-        if not JToken.IsValue() then
-            exit;
-
-        JValue := JToken.AsValue();
-        if not (JValue.IsNull() or JValue.IsUndefined()) then
-            exit(JValue.AsBoolean());
-    end;
-
-
-    local procedure GetInteger(JToken: JsonToken): Integer
-    var
-        JValue: JsonValue;
-    begin
-        if not JToken.IsValue() then
-            exit;
-
-        JValue := JToken.AsValue();
-        if not (JValue.IsNull() or JValue.IsUndefined()) then
-            exit(JValue.AsInteger());
-    end;
-
-    local procedure GetText(JToken: JsonToken): Text
-    var
-        JValue: JsonValue;
-    begin
-        if not JToken.IsValue() then
-            exit;
-
-        JValue := JToken.AsValue();
-        if not (JValue.IsNull() or JValue.IsUndefined()) then
-            exit(JValue.AsText());
-    end;
-
-    local procedure GetDateTime(JToken: JsonToken): DateTime
-    var
-        JValue: JsonValue;
-    begin
-        if not JToken.IsValue() then
-            exit;
-
-        JValue := JToken.AsValue();
-        if not (JValue.IsNull() or JValue.IsUndefined()) then
-            exit(JValue.AsDateTime());
-    end;
-
 }

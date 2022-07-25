@@ -4,22 +4,36 @@ codeunit 5282619 "ACA License Management"
 
     trigger OnRun()
     var
+        AppId: Guid;
+        AppIdParameter: Text;
         AppInfo: ModuleInfo;
+        Results: Dictionary of [Text, Text];
+        BackgroundTaskParameterAppIDMissingErr: Label 'The license check for an acadon AG app could not be executed. The parameter "AppID" is missing.';
+        AppWithIDNotFoundErr: Label 'The app with the id: "%1" is not found.', Comment = '%1 = AppId';
+        LicenseExpiredErr: Label 'The Test License for the app "%1" with ID "%2" is expired. Please contact acadon AG if you further want to use the app or uninstall the app.', Comment = '%1 = AppName, %2 = AppId';
     begin
-        Rec.SetFilter(Id, '<>%1', '');
-        if Rec.FindSet() then
-            repeat
-                if NavApp.GetModuleInfo(Rec.Id, AppInfo) then
-                    LicenseExpired := CheckLicenseExpired(AppInfo.Id);
-            until (Rec.Next() = 0) or LicenseExpired;
+        AppIdParameter := Page.GetBackgroundParameters().Get('AppID');
+        if not Evaluate(AppId, AppIdParameter) then
+            Error(BackgroundTaskParameterAppIDMissingErr);
+
+        if not NavApp.GetModuleInfo(AppId, AppInfo) then
+            Error(AppWithIDNotFoundErr, AppId);
+
+        if CheckLicenseExpired(AppId) then
+            Error(LicenseExpiredErr, AppInfo.Name, AppInfo.Id);
+
+        Results.Add('AppID', AppIdParameter);
+        Results.Add('RemainingDays', Format(GetRemainingDays()));
+
+        Page.SetBackgroundTaskResult(Results);
     end;
 
     var
         FormatHelper: Codeunit "ACA Format Helper";
+        RemainingDaysOfTestPeriod: Integer;
         BaseUriTxt: Label 'https://acadonappsourcestorage.table.core.windows.net/', Locked = true;
         StorageAccountTxt: Label 'acadonappsourcestorage', Locked = true;
         AzureTableNameTxt: Label 'AppSourceLicensing', Locked = true;
-        LicenseExpired: Boolean;
 
     /// <summary>
     /// Checks if the test license expired.
@@ -33,7 +47,7 @@ codeunit 5282619 "ACA License Management"
         if IsNullGuid(AppId) then
             exit;
 
-        if LicenseCheckNeeded() then
+        if not LicenseCheckNeeded() then
             exit;
 
         if not GetLicenseInformation(AppId, TempLicenseInformation) then
@@ -44,8 +58,34 @@ codeunit 5282619 "ACA License Management"
         if TempLicenseInformation.IsLicensed then
             exit;
 
-        EndDate := CalcDate(StrSubstNo(DateExpressionTok, TempLicenseInformation.TestPeriodLength), DT2Date(TempLicenseInformation.Timestamp));
-        exit(EndDate < Today());
+        EndDate := CalcDate(StrSubstNo(DateExpressionTok, TempLicenseInformation.TestPeriodLength), TempLicenseInformation.FirstInstalledAt);
+        RemainingDaysOfTestPeriod := EndDate - Today();
+
+        exit(RemainingDaysOfTestPeriod < 0);
+    end;
+
+    procedure CreateNotification(Results: Dictionary of [Text, Text]; MinRemainingDays: Integer) LicenseNotification: Notification
+    var
+        AppInfo: ModuleInfo;
+        RemainingDays: Integer;
+        RemainingDaysText: Text;
+        AppIDText: Text;
+        NotificationMsg: Label 'The Test License for the App "%1" will expire in %2 days. If you further want to use the app, please contact acadon AG.', Comment = '%1 = App Name, %2 = Remaining Days';
+    begin
+        if not Results.Get('AppID', AppIDText) then
+            exit;
+        if not NavApp.GetModuleInfo(AppIDText, AppInfo) then
+            exit;
+
+        if not Results.Get('RemainingDays', RemainingDaysText) then
+            exit;
+        if not Evaluate(RemainingDays, RemainingDaysText) then
+            exit;
+
+        if RemainingDays > MinRemainingDays then
+            exit;
+
+        LicenseNotification.Message(StrSubstNo(NotificationMsg, AppInfo.Name, RemainingDaysText));
     end;
 
     local procedure LicenseCheckNeeded(): Boolean
@@ -69,6 +109,8 @@ codeunit 5282619 "ACA License Management"
         LicenseInfoJson := RegisterLicense(AppId);
         if TempLicenseInformation.FromJson(LicenseInfoJson) then
             exit(true);
+
+        LogAzureTableConnectionFailed();
     end;
 
     local procedure UpdateLicenseInformation(AppId: Guid; var TempLicenseInformation: Record "ACA License Information" temporary)
@@ -77,7 +119,6 @@ codeunit 5282619 "ACA License Management"
     begin
         if (TempLicenseInformation.NoOfUsers = GetUserCount()) and (TempLicenseInformation.NoOfCompanies = GetCompanyCount()) then
             exit;
-
 
         Payload := GenerateJsonPayload(AppId, TempLicenseInformation.IsLicensed, TempLicenseInformation.TestPeriodLength);
         UpdateTenantToAzureTable(AppId, Payload);
@@ -101,7 +142,7 @@ codeunit 5282619 "ACA License Management"
         RequestMsg: HttpRequestMessage;
         RequestHeaders: HttpHeaders;
         Response: HttpResponseMessage;
-        UriTok: Label '%1%2(PartitionKey=''%3'',RowKey=''%4'')?$RowKey,select=Timestamp,TestPeriodLength,IsLicensed', Locked = true;
+        UriTok: Label '%1%2(PartitionKey=''%3'',RowKey=''%4'')?$RowKey,select=FirstInstalledAt,TestPeriodLength,IsLicensed', Locked = true;
     begin
         RequestMsg.Method(Format(Enum::"Http Request Type"::GET));
         RequestMsg.SetRequestUri(StrSubstNo(UriTok, BaseUriTxt, AzureTableNameTxt, GetPartitionKey(), GetRowKey(AppId)));
@@ -141,6 +182,7 @@ codeunit 5282619 "ACA License Management"
             exit;
 
         Payload := GenerateJsonPayload(AppId, false, TestPeriodLength);
+        Payload.Add('FirstInstalledAt', Today());
         GetPayloadText(Payload, PayloadText);
         if StrLen(PayloadText) = 0 then
             exit;
@@ -280,8 +322,20 @@ codeunit 5282619 "ACA License Management"
             TelemetryScope::All, LogDimensionTok, LogValueTok, LogDimension2Tok, AppId);
     end;
 
-    procedure LicenseIsExpired(): Boolean
+    local procedure LogAzureTableConnectionFailed()
+    var
+        LogEventIdTok: Label 'ACALF0002', Locked = true;
+        LogDimensionTok: Label 'LicenseMgmt', Locked = true;
+        LogDimension2Tok: Label 'License', Locked = true;
+        LogValueTok: Label 'ConnectionFailed', Locked = true;
+        MessageTok: Label 'The connection with the Azure Table could not be established.', Locked = true;
     begin
-        exit(LicenseExpired);
+        LogMessage(LogEventIdTok, MessageTok, Verbosity::Critical, DataClassification::OrganizationIdentifiableInformation,
+            TelemetryScope::All, LogDimensionTok, LogValueTok, LogDimension2Tok);
+    end;
+
+    procedure GetRemainingDays(): Integer
+    begin
+        exit(RemainingDaysOfTestPeriod);
     end;
 }
