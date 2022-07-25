@@ -99,7 +99,7 @@ page 5282624 "ACA Container Contents"
             action(GetBlobPropertiesAction)
             {
                 Caption = 'Get Properties';
-                ToolTip = 'The Get Blob Service Properties operation gets the properties of a storage account’s Blob service, including properties for Storage Analytics and CORS (Cross-Origin Resource Sharing) rules.';
+                ToolTip = 'The Get Blob Service Properties operation gets the properties of a storage account''s Blob service, including properties for Storage Analytics and CORS (Cross-Origin Resource Sharing) rules.';
                 Image = ViewDetails;
                 ApplicationArea = All;
 
