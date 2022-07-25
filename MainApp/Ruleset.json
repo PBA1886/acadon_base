@@ -1,6 +1,7 @@
 {
     "name": "Timber Solution Rules",
     "description": "These rules must be respected by all the AL code written for the timber solution. For more information about the rules, see https://docs.microsoft.com/en-us/dynamics365/business-central/dev-itpro/developer/analyzers/codecop",
+    "generalAction": "Error",
     "rules": [
         {
             "id": "PTE0001",
