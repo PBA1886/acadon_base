@@ -15,10 +15,12 @@ page 5282626 "ACA Azure File Shares"
                 field(Name; Rec.Name)
                 {
                     ApplicationArea = All;
+                    ToolTip = 'File Share Name.';
                 }
                 field("Last-Modified"; Rec."Last-Modified")
                 {
                     ApplicationArea = All;
+                    ToolTip = 'File Share Last-Modified.';
                 }
             }
         }

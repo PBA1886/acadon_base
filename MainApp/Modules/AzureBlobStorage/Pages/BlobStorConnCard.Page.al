@@ -423,6 +423,7 @@ page 5282629 "ACA Blob Stor. Conn. Card"
                 {
                     ApplicationArea = All;
                     Caption = 'Get Service Properties';
+                    ToolTip = 'The Get Blob Service Properties operation gets the properties of a storage account''s Blob service, including properties for Storage Analytics and CORS (Cross-Origin Resource Sharing) rules.\n\nFor detailed information about CORS rules and evaluation logic, see CORS Support for the Storage Services.';
                     Image = LaunchWeb;
                     Promoted = true;
                     PromotedIsBig = true;
@@ -438,6 +439,7 @@ page 5282629 "ACA Blob Stor. Conn. Card"
                 {
                     ApplicationArea = All;
                     Caption = 'Set Service Properties';
+                    ToolTip = 'The Set Blob Service Properties operation sets properties for a storage account''s Blob service endpoint, including properties for Storage Analytics, CORS (Cross-Origin Resource Sharing) rules and soft delete settings.\n\nYou can also use this operation to set the default request version for all incoming requests to the Blob service that do not have a version specified.\n\nSee CORS Support for the Storage Services for more information on CORS rules.';
                     Image = LaunchWeb;
                     Promoted = true;
                     PromotedIsBig = true;
@@ -454,6 +456,7 @@ page 5282629 "ACA Blob Stor. Conn. Card"
                 {
                     ApplicationArea = All;
                     Caption = 'Get Container Metadata (Source)';
+                    ToolTip = 'The Get Container Metadata operation returns all user-defined metadata for the container.';
                     Image = LaunchWeb;
                     Promoted = true;
                     PromotedIsBig = true;
@@ -470,6 +473,7 @@ page 5282629 "ACA Blob Stor. Conn. Card"
                 {
                     ApplicationArea = All;
                     Caption = 'Set Container Metadata (Source)';
+                    ToolTip = 'The Set Container Metadata operation sets one or more user-defined name-value pairs for the specified container.';
                     Image = LaunchWeb;
                     Promoted = true;
                     PromotedIsBig = true;
@@ -486,6 +490,7 @@ page 5282629 "ACA Blob Stor. Conn. Card"
                 {
                     ApplicationArea = All;
                     Caption = 'Get Container ACL (Source)';
+                    ToolTip = 'The Get Container ACL operation gets the permissions for the specified container. The permissions indicate whether container data may be accessed publicly.';
                     Image = LaunchWeb;
                     Promoted = true;
                     PromotedIsBig = true;
@@ -502,6 +507,7 @@ page 5282629 "ACA Blob Stor. Conn. Card"
                 {
                     ApplicationArea = All;
                     Caption = 'Set Container ACL (Source)';
+                    ToolTip = 'The Set Container ACL operation sets the permissions for the specified container. The permissions indicate whether blobs in a container may be accessed publicly.';
                     Image = LaunchWeb;
                     Promoted = true;
                     PromotedIsBig = true;

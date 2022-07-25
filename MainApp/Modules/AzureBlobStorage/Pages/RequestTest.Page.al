@@ -22,6 +22,7 @@ page 5282620 "ACA Request Test"
                 field(Code; BlobStorageConn.Code)
                 {
                     ApplicationArea = All;
+                    ToolTip = 'The Blob Storage Connection Code.';
                     Lookup = true;
                     TableRelation = "ACA Blob Storage Connection".Code;
 
@@ -35,17 +36,20 @@ page 5282620 "ACA Request Test"
                     ApplicationArea = All;
                     Caption = 'API Action';
                     OptionCaption = 'List Containers,Create Container,Delete Container';
+                    ToolTip = 'The API Action that should be executed.';
                 }
                 field(ContainerName; ContainerName)
                 {
                     ApplicationArea = All;
                     Caption = 'Container Name';
+                    ToolTip = 'The Blob Storage Container Name.';
                 }
 
                 field(BlobName; BlobName)
                 {
                     ApplicationArea = All;
                     Caption = 'Blob Name';
+                    ToolTip = 'The Blob Storage Blob Name.';
                 }
             }
             group(Result)
@@ -54,12 +58,14 @@ page 5282620 "ACA Request Test"
                 {
                     ApplicationArea = All;
                     Caption = 'Generated URI';
+                    ToolTip = 'The generated URI that is invoked.';
                     Editable = false;
                 }
                 field(ResultText; ResultText)
                 {
                     ApplicationArea = All;
                     Caption = 'Result';
+                    ToolTip = 'The Result of the webrequest.';
                     Editable = false;
                     MultiLine = true;
 
@@ -88,6 +94,7 @@ page 5282620 "ACA Request Test"
             action(Execute)
             {
                 ApplicationArea = All;
+                ToolTip = 'Execute the request to the Blob Storage.';
                 Image = Start;
                 Promoted = true;
                 PromotedIsBig = true;

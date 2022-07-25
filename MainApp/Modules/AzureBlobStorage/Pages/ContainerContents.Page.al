@@ -22,16 +22,19 @@ page 5282624 "ACA Container Contents"
                 field("Parent Directory"; Rec."Parent Directory")
                 {
                     ApplicationArea = All;
+                    ToolTip = 'The Parent Directory of the Container.';
                     Visible = false;
                 }
                 field(Level; Rec.Level)
                 {
                     ApplicationArea = All;
+                    ToolTip = 'The count of parent directories.';
                     Visible = false;
                 }
                 field(Name; Rec.Name)
                 {
                     ApplicationArea = All;
+                    ToolTip = 'The Container name.';
 
                     trigger OnAssistEdit()
                     begin
@@ -41,23 +44,28 @@ page 5282624 "ACA Container Contents"
                 field("Creation-Time"; Rec."Creation-Time")
                 {
                     ApplicationArea = All;
+                    ToolTip = 'The datetime when the Container was created.';
                 }
                 field("Last-Modified"; Rec."Last-Modified")
                 {
                     ApplicationArea = All;
+                    ToolTip = 'Shows the last datetime when the container was edited.';
                 }
                 field("Content-Length"; Rec."Content-Length")
                 {
                     ApplicationArea = All;
+                    ToolTip = 'The Content-Length of the Container.';
                     BlankZero = true;
                 }
                 field("Content-Type"; Rec."Content-Type")
                 {
                     ApplicationArea = All;
+                    ToolTip = 'The Content-Type of the Container.';
                 }
                 field(BlobType; Rec.BlobType)
                 {
                     ApplicationArea = All;
+                    ToolTip = 'The BlobType of the Container.';
                 }
             }
         }
@@ -69,6 +77,7 @@ page 5282624 "ACA Container Contents"
             action(ShowEntryDetails)
             {
                 Caption = 'Show Entry Details';
+                ToolTip = 'Shows details that are stored in the field XML Value.';
                 Image = ViewDetails;
                 ApplicationArea = All;
 
@@ -90,6 +99,7 @@ page 5282624 "ACA Container Contents"
             action(GetBlobPropertiesAction)
             {
                 Caption = 'Get Properties';
+                ToolTip = 'The Get Blob Service Properties operation gets the properties of a storage account’s Blob service, including properties for Storage Analytics and CORS (Cross-Origin Resource Sharing) rules.';
                 Image = ViewDetails;
                 ApplicationArea = All;
 
@@ -102,6 +112,7 @@ page 5282624 "ACA Container Contents"
             action(SetBlobPropertiesAction)
             {
                 Caption = 'Set Properties (Dummy)';
+                ToolTip = 'The Set Properties operation sets system properties on the blob.';
                 Image = ViewDetails;
                 ApplicationArea = All;
 
@@ -114,6 +125,7 @@ page 5282624 "ACA Container Contents"
             action(GetBlobMetadataAction)
             {
                 Caption = 'Get Metadata';
+                ToolTip = 'The Get Metadata operation returns all user-defined metadata for the specified blob.';
                 Image = ViewDetails;
                 ApplicationArea = All;
 
@@ -126,6 +138,7 @@ page 5282624 "ACA Container Contents"
             action(SetBlobMetadataAction)
             {
                 Caption = 'Set Metadata';
+                ToolTip = 'The Set Metadata operation sets user-defined metadata for the specified blob as one or more name-value pairs.';
                 Image = ViewDetails;
                 ApplicationArea = All;
 
@@ -138,6 +151,7 @@ page 5282624 "ACA Container Contents"
             action(CopyBlobAction)
             {
                 Caption = 'Copy Blob';
+                ToolTip = 'The Copy Blob operation copies a blob to a destination within the storage account.';
                 Image = ViewDetails;
                 ApplicationArea = All;
 
@@ -150,6 +164,7 @@ page 5282624 "ACA Container Contents"
             action(AbortCopyBlobAction)
             {
                 Caption = 'Abort Copy Blob';
+                ToolTip = 'The Abort Copy Blob operation aborts a pending Copy Blob operation.';
                 Image = ViewDetails;
                 ApplicationArea = All;
 
@@ -164,6 +179,7 @@ page 5282624 "ACA Container Contents"
             action(AcquireLeaseBlob)
             {
                 Caption = 'Acquire Lease';
+                ToolTip = 'Establishes a lock on a Blob for delete operations.';
                 Image = ViewDetails;
                 ApplicationArea = All;
 
@@ -175,6 +191,7 @@ page 5282624 "ACA Container Contents"
             action(RenewLeaseBlob)
             {
                 Caption = 'Renew Lease';
+                ToolTip = 'Renews a lock on a Blob to keep it locked again for the same amount of time as before.';
                 Image = ViewDetails;
                 ApplicationArea = All;
 
@@ -186,6 +203,7 @@ page 5282624 "ACA Container Contents"
             action(ReleaseLeaseBlob)
             {
                 Caption = 'Release Lease';
+                ToolTip = 'Releases a lock on a Blob if it is no longer needed so that another client may immediately acquire a lease against the container.';
                 Image = ViewDetails;
                 ApplicationArea = All;
 

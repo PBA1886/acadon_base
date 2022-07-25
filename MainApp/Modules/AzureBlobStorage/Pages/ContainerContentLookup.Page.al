@@ -17,35 +17,42 @@ page 5282625 "ACA Container Content Lookup"
                 field("Parent Directory"; Rec."Parent Directory")
                 {
                     ApplicationArea = All;
+                    ToolTip = 'The Parent Directory of the Container.';
                     Visible = false;
                 }
                 field(Level; Rec.Level)
                 {
                     ApplicationArea = All;
+                    ToolTip = 'The count of parent directories.';
                     Visible = false;
                 }
                 field(Name; Rec.Name)
                 {
                     ApplicationArea = All;
+                    ToolTip = 'The Container name.';
                 }
                 field("Creation-Time"; Rec."Creation-Time")
                 {
                     ApplicationArea = All;
+                    ToolTip = 'The datetime when the Container was created.';
                     Visible = false;
                 }
                 field("Content-Length"; Rec."Content-Length")
                 {
                     ApplicationArea = All;
+                    ToolTip = 'The Content-Length of the Container.';
                     BlankZero = true;
                     Visible = false;
                 }
                 field("Content-Type"; Rec."Content-Type")
                 {
                     ApplicationArea = All;
+                    ToolTip = 'The Content-Type of the Container.';
                 }
                 field(BlobType; Rec.BlobType)
                 {
                     ApplicationArea = All;
+                    ToolTip = 'The BlobType of the Container.';
                     Visible = false;
                 }
             }
@@ -59,6 +66,7 @@ page 5282625 "ACA Container Content Lookup"
             action(Download)
             {
                 Caption = 'Download';
+                ToolTip = 'Download the Blob.';
                 ApplicationArea = All;
                 Promoted = true;
                 PromotedOnly = true;
