@@ -312,7 +312,7 @@ codeunit 5282619 "ACA License Management"
 
     local procedure LogBlockedEnvironment(AppId: Guid)
     var
-        LogEventIdTok: Label 'ACALF0001', Locked = true;
+        LogEventIdTok: Label 'ACALM0001', Locked = true;
         LogDimensionTok: Label 'LicenseMgmt', Locked = true;
         LogDimension2Tok: Label 'License', Locked = true;
         LogValueTok: Label 'LicenseFailed', Locked = true;
@@ -324,7 +324,7 @@ codeunit 5282619 "ACA License Management"
 
     local procedure LogAzureTableConnectionFailed()
     var
-        LogEventIdTok: Label 'ACALF0002', Locked = true;
+        LogEventIdTok: Label 'ACALM0002', Locked = true;
         LogDimensionTok: Label 'LicenseMgmt', Locked = true;
         LogDimension2Tok: Label 'License', Locked = true;
         LogValueTok: Label 'ConnectionFailed', Locked = true;
