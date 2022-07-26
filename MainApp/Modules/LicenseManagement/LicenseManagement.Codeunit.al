@@ -10,7 +10,7 @@ codeunit 5282619 "ACA License Management"
         Results: Dictionary of [Text, Text];
         BackgroundTaskParameterAppIDMissingErr: Label 'The license check for an acadon AG app could not be executed. The parameter "AppID" is missing.';
         AppWithIDNotFoundErr: Label 'The app with the id: "%1" is not found.', Comment = '%1 = AppId';
-        LicenseExpiredErr: Label 'The Test License for the app "%1" with ID "%2" is expired. Please contact acadon AG if you further want to use the app or uninstall the app.', Comment = '%1 = AppName, %2 = AppId';
+        LicenseExpiredErr: Label 'The Test Period for the app "%1" with ID "%2" is expired. Please contact acadon AG if you further want to use the app or uninstall the app.', Comment = '%1 = AppName, %2 = AppId';
     begin
         AppIdParameter := Page.GetBackgroundParameters().Get('AppID');
         if not Evaluate(AppId, AppIdParameter) then
@@ -70,7 +70,7 @@ codeunit 5282619 "ACA License Management"
         RemainingDays: Integer;
         RemainingDaysText: Text;
         AppIDText: Text;
-        NotificationMsg: Label 'The Test License for the App "%1" will expire in %2 days. If you further want to use the app, please contact acadon AG.', Comment = '%1 = App Name, %2 = Remaining Days';
+        NotificationMsg: Label 'The Test Period for the App "%1" will expire in %2 days. If you further want to use the app, please contact acadon AG.', Comment = '%1 = App Name, %2 = Remaining Days';
     begin
         if not Results.Get('AppID', AppIDText) then
             exit;
