@@ -425,7 +425,7 @@
         </trans-unit>
         <trans-unit id="Codeunit 3748841232 - Method 2044216743 - NamedType 984774192" size-unit="char" translate="yes" xml:space="preserve">
           <source>No experience tier selected for the current company. The feature management will not work properly without an experience tier.</source>
-          <target state="translated">Es wurde keine Benutzererfahrung für die aktuelle Firma ausgewählt. Die Funktionsverwaltung wird ohne einregichtete Benutzererfahrung nicht ordentlich funktionieren.</target>
+          <target state="translated">Es wurde keine Benutzererfahrung für den aktuellen Mandant ausgewählt. Die Funktionsverwaltung wird ohne eingerichtete Benutzererfahrung nicht ordentlich funktionieren.</target>
           <note from="Developer" annotates="general" priority="2"/>
           <note from="Xliff Generator" annotates="general" priority="3">Codeunit ACA Feature Management - Method SendNotificationIfExperienceIsNotSet - NamedType ExperienceTierMissingNotificationMsg</note>
         </trans-unit>
@@ -509,7 +509,7 @@
         </trans-unit>
         <trans-unit id="Codeunit 2315710366 - Method 2044216743 - NamedType 984774192" size-unit="char" translate="yes" xml:space="preserve">
           <source>No experience tier selected for the current company. The module management will not work properly without an experience tier.</source>
-          <target state="translated">Es wurde keine Benutzererfahrung für die aktuelle Firma ausgewählt. Das Modul Management wird ohne einregichtete Benutzererfahrung nicht ordentlich funktionieren</target>
+          <target state="translated">Es wurde keine Benutzererfahrung für den aktuellen Mandant ausgewählt. Das Modul Management wird ohne eingerichtete Benutzererfahrung nicht ordentlich funktionieren.</target>
           <note from="Developer" annotates="general" priority="2"/>
           <note from="Xliff Generator" annotates="general" priority="3">Codeunit ACA Module Management - Method SendNotificationIfExperienceIsNotSet - NamedType ExperienceTierMissingNotificationMsg</note>
         </trans-unit>
@@ -527,7 +527,7 @@
         </trans-unit>
         <trans-unit id="Codeunit 2720020166 - NamedType 421386262" size-unit="char" translate="yes" xml:space="preserve">
           <source>The response from the website %1 is invalid and cannot convert into json:\\%2</source>
-          <target state="translated">Die Webseite %1 gab eine ungültige Antwort zurück, welche nicht in json:\\%2 konvertiert werden konnte.</target>
+          <target state="translated">Die Webseite %1 gab eine ungültige Antwort zurück, welche nicht in json konvertiert werden konnte:\\%2 </target>
           <note from="Developer" annotates="general" priority="2">%1 = Website Url,%2 = Error Message</note>
           <note from="Xliff Generator" annotates="general" priority="3">Codeunit ACA Rest Client - NamedType WebServiceResponseInvalidErr</note>
         </trans-unit>
@@ -1685,7 +1685,7 @@
         </trans-unit>
         <trans-unit id="Page 3530639672 - Action 4283638840 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
           <source>This action will disable the feature if possible.</source>
-          <target state="translated">Diese Aktion deaktiviert die Erweiterung, wenn möglich</target>
+          <target state="translated">Diese Aktion deaktiviert die Funktion, wenn dies möglich ist.</target>
           <note from="Developer" annotates="general" priority="2"/>
           <note from="Xliff Generator" annotates="general" priority="3">Page ACA Features - Action Disable - Property ToolTip</note>
         </trans-unit>
@@ -1877,7 +1877,7 @@
         </trans-unit>
         <trans-unit id="Page 2561984934 - Action 4283638840 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
           <source>This action will disable the module if possible.</source>
-          <target state="translated">Diese Aktion deaktiviert das Modul, wenn möglich.</target>
+          <target state="translated">Diese Aktion deaktiviert das Modul, wenn dies möglich ist.</target>
           <note from="Developer" annotates="general" priority="2"/>
           <note from="Xliff Generator" annotates="general" priority="3">Page ACA Modules - Action Disable - Property ToolTip</note>
         </trans-unit>
