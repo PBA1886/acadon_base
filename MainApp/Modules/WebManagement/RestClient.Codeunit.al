@@ -70,7 +70,9 @@ codeunit 5282620 "ACA Rest Client"
         IsHandled: Boolean;
     begin
         OnBeforeCreateHttpClient(Client, Content, Request, IsHandled);
+
         DoCreateHttpClient(Content, Request, IsHandled);
+
         OnAfterCreateHttpClient(Client, Content, Request);
     end;
 

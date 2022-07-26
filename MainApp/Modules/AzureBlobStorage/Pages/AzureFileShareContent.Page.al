@@ -15,10 +15,12 @@ page 5282627 "ACA Azure File Share Content"
                 field(Name; Rec.Name)
                 {
                     ApplicationArea = All;
+                    ToolTip = 'File Share Content Name.';
                 }
                 field("Content-Length"; Rec."Content-Length")
                 {
                     ApplicationArea = All;
+                    ToolTip = 'File Share Content-Length.';
                     BlankZero = true;
                 }
             }

@@ -15,10 +15,12 @@ page 5282628 "ACA File Share C. Lookup"
                 field(Name; Rec.Name)
                 {
                     ApplicationArea = All;
+                    ToolTip = 'The Container Name.';
                 }
                 field("Content-Length"; Rec."Content-Length")
                 {
                     ApplicationArea = All;
+                    ToolTip = 'The Content-Length of the Container.';
                     BlankZero = true;
                     Visible = false;
                 }
@@ -33,6 +35,7 @@ page 5282628 "ACA File Share C. Lookup"
             action(Download)
             {
                 Caption = 'Download';
+                ToolTip = 'Download the Blob.';
                 ApplicationArea = All;
                 Promoted = true;
                 PromotedOnly = true;

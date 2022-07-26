@@ -68,6 +68,7 @@ page 5282616 "ACA Features"
             action(Enable)
             {
                 Caption = 'Enable';
+                ToolTip = 'This action will enable the feature and may also make necessary changes regarding the feature.';
                 Image = Start;
                 ApplicationArea = All;
                 Enabled = EnableEnabled;
@@ -85,6 +86,7 @@ page 5282616 "ACA Features"
             action(Disable)
             {
                 Caption = 'Disable';
+                ToolTip = 'This action will disable the feature if possible.';
                 Image = Stop;
                 ApplicationArea = All;
                 Enabled = DisableEnabled;
@@ -100,6 +102,7 @@ page 5282616 "ACA Features"
             action(Remove)
             {
                 Caption = 'Remove';
+                ToolTip = 'This action will delete the feature.';
                 Image = Delete;
                 ApplicationArea = All;
                 Visible = IsUnknownFeature;

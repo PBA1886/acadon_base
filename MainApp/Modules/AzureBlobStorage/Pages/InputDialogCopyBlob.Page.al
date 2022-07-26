@@ -14,17 +14,20 @@ page 5282623 "ACA Input Dialog Copy Blob"
                 {
                     ApplicationArea = All;
                     Caption = 'Destination Storage Account';
+                    ToolTip = 'Specifies the destination Storage Account.';
                     Editable = false;
                 }
                 field("Destination Container Name"; DestContainer)
                 {
                     ApplicationArea = All;
                     Caption = 'Destination Container Name';
+                    ToolTip = 'Specifies the destination Container.';
                 }
                 field("Destination Blob Name"; DestBlobName)
                 {
                     ApplicationArea = All;
                     Caption = 'Destination Blob Name';
+                    ToolTip = 'Specifies the destination Blob.';
                 }
             }
         }

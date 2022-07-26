@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
-  <file datatype="xml" source-language="en-US" target-language="de-DE" original="acadon Base">
+  <file datatype="xml" source-language="en-US" target-language="de-DE" original="acadon_Base">
     <body>
       <group id="body">
         <trans-unit id="Table 4107438787 - Field 883711285 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
@@ -285,12 +285,6 @@
           <note from="Developer" annotates="general" priority="2"/>
           <note from="Xliff Generator" annotates="general" priority="3">Table ACA Module - Property Caption</note>
         </trans-unit>
-        <trans-unit id="Table 3105358331 - Field 3702373668 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Category</source>
-          <target state="translated">Kategorie</target>
-          <note from="Developer" annotates="general" priority="2"/>
-          <note from="Xliff Generator" annotates="general" priority="3">Table ACA Module - Field Category - Property Caption</note>
-        </trans-unit>
         <trans-unit id="Table 3105358331 - Field 2891538263 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Enabled</source>
           <target state="translated">Aktiviert</target>
@@ -383,7 +377,7 @@
         </trans-unit>
         <trans-unit id="Codeunit 1546311195 - NamedType 974354996" size-unit="char" translate="yes" xml:space="preserve">
           <source>Could not %1%2 Properties.</source>
-          <target state="translated">Konnte nicht %1 für Eigenschaften.</target>
+          <target state="translated">Konnte nicht %1%2 für Eigenschaften.</target>
           <note from="Developer" annotates="general" priority="2">%1 = Get/Set, %2 = Service/"", </note>
           <note from="Xliff Generator" annotates="general" priority="3">Codeunit ACA Blob Storage API - NamedType PropertiesOperationNotSuccessfulErr</note>
         </trans-unit>
@@ -428,6 +422,18 @@
           <target state="translated">Die Funktion %1 ist nun aktiviert.</target>
           <note from="Developer" annotates="general" priority="2"> %1 = Feature Name</note>
           <note from="Xliff Generator" annotates="general" priority="3">Codeunit ACA Feature Management - Method Enable - NamedType FeatureEnabledMsg</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 3748841232 - Method 2044216743 - NamedType 984774192" size-unit="char" translate="yes" xml:space="preserve">
+          <source>No experience tier selected for the current company. The feature management will not work properly without an experience tier.</source>
+          <target state="translated">Es wurde keine Benutzererfahrung für den aktuellen Mandant ausgewählt. Die Funktionsverwaltung wird ohne eingerichtete Benutzererfahrung nicht ordentlich funktionieren.</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit ACA Feature Management - Method SendNotificationIfExperienceIsNotSet - NamedType ExperienceTierMissingNotificationMsg</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 3748841232 - Method 2044216743 - NamedType 2274459877" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Open Company Information</source>
+          <target state="translated">Öffne Firmendaten</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit ACA Feature Management - Method SendNotificationIfExperienceIsNotSet - NamedType OpenCompanyInformationActionLbl</note>
         </trans-unit>
         <trans-unit id="Codeunit 496100916 - Method 2473526021 - NamedType 1651198496" size-unit="char" translate="yes" xml:space="preserve">
           <source>Could not copy %1 to %2.</source>
@@ -501,6 +507,36 @@
           <note from="Developer" annotates="general" priority="2"> %1 = Module Name</note>
           <note from="Xliff Generator" annotates="general" priority="3">Codeunit ACA Module Management - Method Enable - NamedType ModuleEnabledMsg</note>
         </trans-unit>
+        <trans-unit id="Codeunit 2315710366 - Method 2044216743 - NamedType 984774192" size-unit="char" translate="yes" xml:space="preserve">
+          <source>No experience tier selected for the current company. The module management will not work properly without an experience tier.</source>
+          <target state="translated">Es wurde keine Benutzererfahrung für den aktuellen Mandant ausgewählt. Das Modul Management wird ohne eingerichtete Benutzererfahrung nicht ordentlich funktionieren.</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit ACA Module Management - Method SendNotificationIfExperienceIsNotSet - NamedType ExperienceTierMissingNotificationMsg</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 2315710366 - Method 2044216743 - NamedType 2274459877" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Open Company Information</source>
+          <target state="translated">Öffne Firmendaten</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit ACA Module Management - Method SendNotificationIfExperienceIsNotSet - NamedType OpenCompanyInformationActionLbl</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 2720020166 - NamedType 2397347290" size-unit="char" translate="yes" xml:space="preserve">
+          <source>The website %1 is not available</source>
+          <target state="translated">Die Webseite %1 is nicht erreichbar</target>
+          <note from="Developer" annotates="general" priority="2">%1 = Website Url</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit ACA Rest Client - NamedType WebServiceConnectionErr</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 2720020166 - NamedType 421386262" size-unit="char" translate="yes" xml:space="preserve">
+          <source>The response from the website %1 is invalid and cannot convert into json:\\%2</source>
+          <target state="translated">Die Webseite %1 gab eine ungültige Antwort zurück, welche nicht in json konvertiert werden konnte:\\%2 </target>
+          <note from="Developer" annotates="general" priority="2">%1 = Website Url,%2 = Error Message</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit ACA Rest Client - NamedType WebServiceResponseInvalidErr</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 2720020166 - Method 3212637975 - NamedType 2752023427" size-unit="char" translate="yes" xml:space="preserve">
+          <source>The Method %1 is not supported</source>
+          <target state="translated">Die HTTP-Methode %1 ist nicht unterstützt.</target>
+          <note from="Developer" annotates="general" priority="2">%1 = Http-Method</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit ACA Rest Client - Method SendRequest - NamedType MethodNotSupportedErr</note>
+        </trans-unit>
         <trans-unit id="Codeunit 1870669211 - Method 2005570468 - NamedType 1773691126" size-unit="char" translate="yes" xml:space="preserve">
           <source>Unknown</source>
           <target state="translated">Unbekannt</target>
@@ -539,7 +575,7 @@
         </trans-unit>
         <trans-unit id="Codeunit 1306543373 - Method 1340944587 - NamedType 4132244079" size-unit="char" translate="yes" xml:space="preserve">
           <source>%1 can not be empty</source>
-          <target state="translated">%1 darf nicht leer sein.</target>
+          <target state="translated">%1 darf nicht leer sein</target>
           <note from="Developer" annotates="general" priority="2">%1 = Variable Name</note>
           <note from="Xliff Generator" annotates="general" priority="3">Codeunit ACA URI Helper - Method TestConstructUrlParameter - NamedType ValueCanNotBeEmptyErr</note>
         </trans-unit>
@@ -609,11 +645,35 @@
           <note from="Developer" annotates="general" priority="2"/>
           <note from="Xliff Generator" annotates="general" priority="3">Page ACA Azure File Share Content - Property Caption</note>
         </trans-unit>
+        <trans-unit id="Page 652615724 - Control 995333756 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>File Share Content-Length.</source>
+          <target state="translated">Dateifreigabe Inhaltsgröße</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page ACA Azure File Share Content - Control Content-Length - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 652615724 - Control 2961552353 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>File Share Content Name.</source>
+          <target state="translated">Dateifreigabe Inhaltsname</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page ACA Azure File Share Content - Control Name - Property ToolTip</note>
+        </trans-unit>
         <trans-unit id="Page 4293139214 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>File Shares</source>
           <target state="translated">Dateifreigaben</target>
           <note from="Developer" annotates="general" priority="2"/>
           <note from="Xliff Generator" annotates="general" priority="3">Page ACA Azure File Shares - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 4293139214 - Control 771523618 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>File Share Last-Modified.</source>
+          <target state="translated">Dateifreigabe Zuletzt geändert</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page ACA Azure File Shares - Control Last-Modified - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 4293139214 - Control 2961552353 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>File Share Name.</source>
+          <target state="translated">Dateifreigabe Name.</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page ACA Azure File Shares - Control Name - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="Page 881246390 - Property 2019332006" size-unit="char" translate="yes" xml:space="preserve">
           <source>New,Process,Reports,View Container,Create Container,Delete Container,Upload,Download,Delete Blob,Lease,Properties</source>
@@ -687,11 +747,23 @@
           <note from="Developer" annotates="general" priority="2"/>
           <note from="Xliff Generator" annotates="general" priority="3">Page ACA Blob Stor. Conn. Card - Action BlobProperties - Property Caption</note>
         </trans-unit>
+        <trans-unit id="Page 881246390 - Action 193955382 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>The Get Container ACL operation gets the permissions for the specified container. The permissions indicate whether container data may be accessed publicly.</source>
+          <target state="translated">Der Container ACL holen Vorgang ruft die Berechtigungen für den angegebenen Container ab. Mit den Berechtigungen wird angegeben, ob auf die Containerdaten öffentlich zugegriffen werden kann.</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page ACA Blob Stor. Conn. Card - Action GetContainerAclSource - Property ToolTip</note>
+        </trans-unit>
         <trans-unit id="Page 881246390 - Action 193955382 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Get Container ACL (Source)</source>
           <target state="translated">Container ACL holen (Herkunft)</target>
           <note from="Developer" annotates="general" priority="2"/>
           <note from="Xliff Generator" annotates="general" priority="3">Page ACA Blob Stor. Conn. Card - Action GetContainerAclSource - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 881246390 - Action 2033095947 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>The Get Container Metadata operation returns all user-defined metadata for the container.</source>
+          <target state="translated">Der Container Metadaten holen Vorgang gibt alle benutzerdefinierten Metadaten für den Container zurück.</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page ACA Blob Stor. Conn. Card - Action GetContainerMetadataSource - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="Page 881246390 - Action 2033095947 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Get Container Metadata (Source)</source>
@@ -699,11 +771,23 @@
           <note from="Developer" annotates="general" priority="2"/>
           <note from="Xliff Generator" annotates="general" priority="3">Page ACA Blob Stor. Conn. Card - Action GetContainerMetadataSource - Property Caption</note>
         </trans-unit>
+        <trans-unit id="Page 881246390 - Action 3228159230 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>The Get Blob Service Properties operation gets the properties of a storage account's Blob service, including properties for Storage Analytics and CORS (Cross-Origin Resource Sharing) rules.\n\nFor detailed information about CORS rules and evaluation logic, see CORS Support for the Storage Services.</source>
+          <target state="translated">Der Dienst Eigenschaften holen Vorgang ruft die Eigenschaften des Blob-Diensts eines Speicherkontos ab, einschließlich Eigenschaften für Storage Analytics- und CORS-Regeln (Cross-Origin Resource Sharing).</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page ACA Blob Stor. Conn. Card - Action GetServiceProperties - Property ToolTip</note>
+        </trans-unit>
         <trans-unit id="Page 881246390 - Action 3228159230 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Get Service Properties</source>
           <target state="translated">Dienst Eigenschaften holen</target>
           <note from="Developer" annotates="general" priority="2"/>
           <note from="Xliff Generator" annotates="general" priority="3">Page ACA Blob Stor. Conn. Card - Action GetServiceProperties - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 881246390 - Action 3788534882 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>The Set Container ACL operation sets the permissions for the specified container. The permissions indicate whether blobs in a container may be accessed publicly.</source>
+          <target state="translated">Der Container ACL setzten Vorgang legt die Berechtigungen für den angegebenen Container fest. Die Berechtigungen geben an, ob öffentlicher Zugriff auf BLOBs in einem Container zulässig ist.</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page ACA Blob Stor. Conn. Card - Action SetContainerAclSource - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="Page 881246390 - Action 3788534882 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Set Container ACL (Source)</source>
@@ -711,11 +795,23 @@
           <note from="Developer" annotates="general" priority="2"/>
           <note from="Xliff Generator" annotates="general" priority="3">Page ACA Blob Stor. Conn. Card - Action SetContainerAclSource - Property Caption</note>
         </trans-unit>
+        <trans-unit id="Page 881246390 - Action 2155022871 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>The Set Container Metadata operation sets one or more user-defined name-value pairs for the specified container.</source>
+          <target state="translated">Mit dem Container Metadaten setzten Vorgang werden ein oder mehrere benutzerdefinierte Name-Wert-Paare für den angegebenen Container festgelegt.</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page ACA Blob Stor. Conn. Card - Action SetContainerMetadataSource - Property ToolTip</note>
+        </trans-unit>
         <trans-unit id="Page 881246390 - Action 2155022871 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Set Container Metadata (Source)</source>
           <target state="translated">Container Metadaten setzten (Herkunft)</target>
           <note from="Developer" annotates="general" priority="2"/>
           <note from="Xliff Generator" annotates="general" priority="3">Page ACA Blob Stor. Conn. Card - Action SetContainerMetadataSource - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 881246390 - Action 1113516618 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>The Set Blob Service Properties operation sets properties for a storage account's Blob service endpoint, including properties for Storage Analytics, CORS (Cross-Origin Resource Sharing) rules and soft delete settings.\n\nYou can also use this operation to set the default request version for all incoming requests to the Blob service that do not have a version specified.\n\nSee CORS Support for the Storage Services for more information on CORS rules.</source>
+          <target state="translated">Der Dienst Eigenschaften setzten Vorgang legt Eigenschaften für den Blob-Dienstendpunkt eines Speicherkontos fest, einschließlich Eigenschaften für Storage Analytics, CORS (Cross-Origin Resource Sharing)-Regeln und Soft delete-Einstellungen.</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page ACA Blob Stor. Conn. Card - Action SetServiceProperties - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="Page 881246390 - Action 1113516618 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Set Service Properties</source>
@@ -1191,6 +1287,60 @@
           <note from="Developer" annotates="general" priority="2"/>
           <note from="Xliff Generator" annotates="general" priority="3">Page ACA Container - Property Caption</note>
         </trans-unit>
+        <trans-unit id="Page 2399678664 - Control 1017087755 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Shows default encryption scope.</source>
+          <target state="translated">Zeigt den Standardverschlüsselungsbereich an.</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page ACA Container - Control DefaultEntryptionScope - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 2399678664 - Control 894107473 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Shows default encryption scope override.</source>
+          <target state="translated">Zeigt an, dass der Standardverschlüsselungsbereich außer Kraft gesetzt ist.</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page ACA Container - Control DenyEncryptionScopeOverride - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 2399678664 - Control 2808392988 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Shows if the Container is Immutable.</source>
+          <target state="translated">Zeigt an, ob der Container unveränderlich ist.</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page ACA Container - Control HasImmutabilityPolicy - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 2399678664 - Control 2791363642 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Shows if the Container is classified for Legal Hold.</source>
+          <target state="translated">Zeigt an, ob der Container als gesetzlich Aufbewahrungspflichtig klassifiziert ist.</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page ACA Container - Control HasLegalHold - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 2399678664 - Control 771523618 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Shows the last datetime when the container was edited.</source>
+          <target state="translated">Zeigt an, wann der Container zuletzt geändert wurde.</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page ACA Container - Control Last-Modified - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 2399678664 - Control 3159815827 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Shows the Leasing State of the Container.</source>
+          <target state="translated">Zeigt den Lease-State an.</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page ACA Container - Control LeaseState - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 2399678664 - Control 2796467918 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Shows the Leasing Status of the Container.</source>
+          <target state="translated">Zeigt den Lease-Status an.</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page ACA Container - Control LeaseStatus - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 2399678664 - Control 2961552353 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>The Container name.</source>
+          <target state="translated">Der Container Name.</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page ACA Container - Control Name - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 2399678664 - Action 3488727383 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Shows details that are stored in the field XML Value.</source>
+          <target state="translated">Zeigt den Inhalt des Feldes XML Value an.</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page ACA Container - Action ShowEntryDetails - Property ToolTip</note>
+        </trans-unit>
         <trans-unit id="Page 2399678664 - Action 3488727383 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Show Entry Details</source>
           <target state="translated">Details anzeigen</target>
@@ -1202,6 +1352,54 @@
           <target state="translated">Container Inhalt</target>
           <note from="Developer" annotates="general" priority="2"/>
           <note from="Xliff Generator" annotates="general" priority="3">Page ACA Container Content Lookup - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 1564546561 - Control 2338894653 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>The BlobType of the Container.</source>
+          <target state="translated">Der Blob-Typ des Containers.</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page ACA Container Content Lookup - Control BlobType - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 1564546561 - Control 995333756 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>The Content-Length of the Container.</source>
+          <target state="translated">Die Inhalts-Länge des Containers.</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page ACA Container Content Lookup - Control Content-Length - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 1564546561 - Control 782056840 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>The Content-Type of the Container.</source>
+          <target state="translated">Die Inhalts-Art des Containers.</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page ACA Container Content Lookup - Control Content-Type - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 1564546561 - Control 3893835339 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>The datetime when the Container was created.</source>
+          <target state="translated">Das Datum, wann der Container erstellt wurde.</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page ACA Container Content Lookup - Control Creation-Time - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 1564546561 - Control 1789400218 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>The count of parent directories.</source>
+          <target state="translated">Die Anzahl an übergeordneten Verzeichnissen.</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page ACA Container Content Lookup - Control Level - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 1564546561 - Control 2961552353 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>The Container name.</source>
+          <target state="translated">Der Container Name</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page ACA Container Content Lookup - Control Name - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 1564546561 - Control 2039748839 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>The Parent Directory of the Container.</source>
+          <target state="translated">Das Übergeordnetes Verzeichnis des Containers.</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page ACA Container Content Lookup - Control Parent Directory - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 1564546561 - Action 593408208 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Download the Blob.</source>
+          <target state="translated">Den Blob herunterladen.</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page ACA Container Content Lookup - Action Download - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="Page 1564546561 - Action 593408208 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Download</source>
@@ -1215,11 +1413,71 @@
           <note from="Developer" annotates="general" priority="2"/>
           <note from="Xliff Generator" annotates="general" priority="3">Page ACA Container Contents - Property Caption</note>
         </trans-unit>
+        <trans-unit id="Page 746318842 - Control 2338894653 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>The BlobType of the Container.</source>
+          <target state="translated">Der Blob-Typ des Containers.</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page ACA Container Contents - Control BlobType - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 746318842 - Control 995333756 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>The Content-Length of the Container.</source>
+          <target state="translated">Die Inhalts-Länge des Containers.</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page ACA Container Contents - Control Content-Length - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 746318842 - Control 782056840 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>The Content-Type of the Container.</source>
+          <target state="translated">Die Inhalts-Art des Containers.</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page ACA Container Contents - Control Content-Type - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 746318842 - Control 3893835339 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>The datetime when the Container was created.</source>
+          <target state="translated">Das Datum, wann der Container erstellt wurde.</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page ACA Container Contents - Control Creation-Time - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 746318842 - Control 771523618 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Shows the last datetime when the container was edited.</source>
+          <target state="translated">Zeigt an, wann der Container zuletzt geändert wurde.</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page ACA Container Contents - Control Last-Modified - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 746318842 - Control 1789400218 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>The count of parent directories.</source>
+          <target state="translated">Die Anzahl an übergeordneten Verzeichnissen.</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page ACA Container Contents - Control Level - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 746318842 - Control 2961552353 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>The Container name.</source>
+          <target state="translated">Der Container Name</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page ACA Container Contents - Control Name - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 746318842 - Control 2039748839 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>The Parent Directory of the Container.</source>
+          <target state="translated">Das Übergeordnetes Verzeichnis des Containers.</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page ACA Container Contents - Control Parent Directory - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 746318842 - Action 3266913118 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>The Abort Copy Blob operation aborts a pending Copy Blob operation.</source>
+          <target state="translated">Der Blob Kopiervorgang abbrechen Vorgang bricht ausstehende Copy Blob Vorgänge ab.</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page ACA Container Contents - Action AbortCopyBlobAction - Property ToolTip</note>
+        </trans-unit>
         <trans-unit id="Page 746318842 - Action 3266913118 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Abort Copy Blob</source>
           <target state="translated">Blob Kopiervorgang abbrechen</target>
           <note from="Developer" annotates="general" priority="2"/>
           <note from="Xliff Generator" annotates="general" priority="3">Page ACA Container Contents - Action AbortCopyBlobAction - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 746318842 - Action 3409237487 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Establishes a lock on a Blob for delete operations.</source>
+          <target state="translated">Richtet eine sperre auf einen Blob für Lösch-Vorgänge ein.</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page ACA Container Contents - Action AcquireLeaseBlob - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="Page 746318842 - Action 3409237487 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Acquire Lease</source>
@@ -1227,11 +1485,23 @@
           <note from="Developer" annotates="general" priority="2"/>
           <note from="Xliff Generator" annotates="general" priority="3">Page ACA Container Contents - Action AcquireLeaseBlob - Property Caption</note>
         </trans-unit>
+        <trans-unit id="Page 746318842 - Action 1776687052 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>The Copy Blob operation copies a blob to a destination within the storage account.</source>
+          <target state="translated">Der Blob kopieren Vorgang kopiert einen Blob an ein Ziel innerhalb des Storage Accounts.</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page ACA Container Contents - Action CopyBlobAction - Property ToolTip</note>
+        </trans-unit>
         <trans-unit id="Page 746318842 - Action 1776687052 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Copy Blob</source>
           <target state="translated">Blob kopieren</target>
           <note from="Developer" annotates="general" priority="2"/>
           <note from="Xliff Generator" annotates="general" priority="3">Page ACA Container Contents - Action CopyBlobAction - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 746318842 - Action 215757058 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>The Get Metadata operation returns all user-defined metadata for the specified blob.</source>
+          <target state="translated">Der Blob Metadaten holen Vorgang gibt alle benutzerdefinierten Metadaten für das benutzerdefinierte BLOB oder die benutzerdefinierte Momentaufnahme zurück</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page ACA Container Contents - Action GetBlobMetadataAction - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="Page 746318842 - Action 215757058 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Get Metadata</source>
@@ -1239,11 +1509,23 @@
           <note from="Developer" annotates="general" priority="2"/>
           <note from="Xliff Generator" annotates="general" priority="3">Page ACA Container Contents - Action GetBlobMetadataAction - Property Caption</note>
         </trans-unit>
+        <trans-unit id="Page 746318842 - Action 989574110 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>The Get Blob Service Properties operation gets the properties of a storage account's Blob service, including properties for Storage Analytics and CORS (Cross-Origin Resource Sharing) rules.</source>
+          <target state="translated">Der Eigenschaften holen Vorgang ruft die Eigenschaften des Blob-Diensts eines Speicherkontos ab, einschließlich Eigenschaften für Storage Analytics- und CORS-Regeln (Cross-Origin Resource Sharing).</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page ACA Container Contents - Action GetBlobPropertiesAction - Property ToolTip</note>
+        </trans-unit>
         <trans-unit id="Page 746318842 - Action 989574110 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Get Properties</source>
           <target state="translated">Eigenschaften holen</target>
           <note from="Developer" annotates="general" priority="2"/>
           <note from="Xliff Generator" annotates="general" priority="3">Page ACA Container Contents - Action GetBlobPropertiesAction - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 746318842 - Action 2483274984 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Releases a lock on a Blob if it is no longer needed so that another client may immediately acquire a lease against the container.</source>
+          <target state="translated">Hebt die Blob-Sperre auf, wenn sie nicht mehr benötigt wird, sodass sofort von einem anderen Client eine Lease für das BLOB abgerufen werden kann</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page ACA Container Contents - Action ReleaseLeaseBlob - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="Page 746318842 - Action 2483274984 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Release Lease</source>
@@ -1251,11 +1533,23 @@
           <note from="Developer" annotates="general" priority="2"/>
           <note from="Xliff Generator" annotates="general" priority="3">Page ACA Container Contents - Action ReleaseLeaseBlob - Property Caption</note>
         </trans-unit>
+        <trans-unit id="Page 746318842 - Action 3025263682 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Renews a lock on a Blob to keep it locked again for the same amount of time as before.</source>
+          <target state="translated">Erneuert eine Sperre auf einem Blob, so dass der Blob erneut für die gleiche Länge gesperrt bleibt.</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page ACA Container Contents - Action RenewLeaseBlob - Property ToolTip</note>
+        </trans-unit>
         <trans-unit id="Page 746318842 - Action 3025263682 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Renew Lease</source>
           <target state="translated">Lease erneuern</target>
           <note from="Developer" annotates="general" priority="2"/>
           <note from="Xliff Generator" annotates="general" priority="3">Page ACA Container Contents - Action RenewLeaseBlob - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 746318842 - Action 1156924534 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>The Set Metadata operation sets user-defined metadata for the specified blob as one or more name-value pairs.</source>
+          <target state="translated">Der Blob Metadaten setzten Vorgang legt benutzerdefinierte Metadaten für das angegebene BLOB als ein oder mehrere Name-Wert-Paare fest</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page ACA Container Contents - Action SetBlobMetadataAction - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="Page 746318842 - Action 1156924534 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Set Metadata</source>
@@ -1263,11 +1557,23 @@
           <note from="Developer" annotates="general" priority="2"/>
           <note from="Xliff Generator" annotates="general" priority="3">Page ACA Container Contents - Action SetBlobMetadataAction - Property Caption</note>
         </trans-unit>
+        <trans-unit id="Page 746318842 - Action 1138658186 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>The Set Properties operation sets system properties on the blob.</source>
+          <target state="translated">Mit dem Vorgang Eigenschaften setzten werden Systemeigenschaften für das BLOB festgelegt</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page ACA Container Contents - Action SetBlobPropertiesAction - Property ToolTip</note>
+        </trans-unit>
         <trans-unit id="Page 746318842 - Action 1138658186 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Set Properties (Dummy)</source>
           <target state="translated">Eigenschaften setzten (Dummy)</target>
           <note from="Developer" annotates="general" priority="2"/>
           <note from="Xliff Generator" annotates="general" priority="3">Page ACA Container Contents - Action SetBlobPropertiesAction - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 746318842 - Action 3488727383 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Shows details that are stored in the field XML Value.</source>
+          <target state="translated">Zeigt den Inhalt des Feldes XML Value an.</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page ACA Container Contents - Action ShowEntryDetails - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="Page 746318842 - Action 3488727383 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Show Entry Details</source>
@@ -1377,6 +1683,12 @@
           <note from="Developer" annotates="general" priority="2"/>
           <note from="Xliff Generator" annotates="general" priority="3">Page ACA Features - Control Mandantory By - Property Caption</note>
         </trans-unit>
+        <trans-unit id="Page 3530639672 - Action 4283638840 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>This action will disable the feature if possible.</source>
+          <target state="translated">Diese Aktion deaktiviert die Funktion, wenn dies möglich ist.</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page ACA Features - Action Disable - Property ToolTip</note>
+        </trans-unit>
         <trans-unit id="Page 3530639672 - Action 4283638840 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Disable</source>
           <target state="translated">Deaktivieren</target>
@@ -1388,6 +1700,12 @@
           <target state="translated">Möchten Sie die Funktion aktivieren?</target>
           <note from="Developer" annotates="general" priority="2"/>
           <note from="Xliff Generator" annotates="general" priority="3">Page ACA Features - Action Enable - Property AboutTitle</note>
+        </trans-unit>
+        <trans-unit id="Page 3530639672 - Action 3483044347 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>This action will enable the feature and may also make necessary changes regarding the feature.</source>
+          <target state="translated">Diese Aktion aktiviert die Funktion. Es werden ebenfalls nötige Änderungen durchgeführt</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page ACA Features - Action Enable - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="Page 3530639672 - Action 3483044347 - Property 247559172" size-unit="char" translate="yes" xml:space="preserve">
           <source>It is possible to enable the feature before it is released.</source>
@@ -1401,6 +1719,12 @@
           <note from="Developer" annotates="general" priority="2"/>
           <note from="Xliff Generator" annotates="general" priority="3">Page ACA Features - Action Enable - Property Caption</note>
         </trans-unit>
+        <trans-unit id="Page 3530639672 - Action 3238504282 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>This action will delete the feature.</source>
+          <target state="translated">Diese Aktion löscht die Funktion.</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page ACA Features - Action Remove - Property ToolTip</note>
+        </trans-unit>
         <trans-unit id="Page 3530639672 - Action 3238504282 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Remove</source>
           <target state="translated">Löschen</target>
@@ -1413,11 +1737,35 @@
           <note from="Developer" annotates="general" priority="2"/>
           <note from="Xliff Generator" annotates="general" priority="3">Page ACA File Share C. Lookup - Property Caption</note>
         </trans-unit>
+        <trans-unit id="Page 3519336281 - Control 995333756 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>The Content-Length of the Container.</source>
+          <target state="translated">Die Inhalts-Länge des Containers.</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page ACA File Share C. Lookup - Control Content-Length - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 3519336281 - Control 2961552353 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>The Container Name.</source>
+          <target state="translated">Der Container Name.</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page ACA File Share C. Lookup - Control Name - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 3519336281 - Action 593408208 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Download the Blob.</source>
+          <target state="translated">Den Blob herunterladen.</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page ACA File Share C. Lookup - Action Download - Property ToolTip</note>
+        </trans-unit>
         <trans-unit id="Page 3519336281 - Action 593408208 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Download</source>
           <target state="translated">Herunterladen</target>
           <note from="Developer" annotates="general" priority="2"/>
           <note from="Xliff Generator" annotates="general" priority="3">Page ACA File Share C. Lookup - Action Download - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3744150213 - Control 1334856188 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the destination Blob.</source>
+          <target state="translated">Gibt den Ziel Blob an.</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page ACA Input Dialog Copy Blob - Control Destination Blob Name - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="Page 3744150213 - Control 1334856188 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Destination Blob Name</source>
@@ -1425,11 +1773,23 @@
           <note from="Developer" annotates="general" priority="2"/>
           <note from="Xliff Generator" annotates="general" priority="3">Page ACA Input Dialog Copy Blob - Control Destination Blob Name - Property Caption</note>
         </trans-unit>
+        <trans-unit id="Page 3744150213 - Control 1096642512 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the destination Container.</source>
+          <target state="translated">Gibt den Ziel Container an.</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page ACA Input Dialog Copy Blob - Control Destination Container Name - Property ToolTip</note>
+        </trans-unit>
         <trans-unit id="Page 3744150213 - Control 1096642512 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Destination Container Name</source>
           <target state="translated">Ziel Container Name</target>
           <note from="Developer" annotates="general" priority="2"/>
           <note from="Xliff Generator" annotates="general" priority="3">Page ACA Input Dialog Copy Blob - Control Destination Container Name - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3744150213 - Control 1574055136 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the destination Storage Account.</source>
+          <target state="translated">Gibt den Ziel Storage Account an.</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page ACA Input Dialog Copy Blob - Control Destination Storage Account - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="Page 3744150213 - Control 1574055136 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Destination Storage Account</source>
@@ -1479,12 +1839,6 @@
           <note from="Developer" annotates="general" priority="2"/>
           <note from="Xliff Generator" annotates="general" priority="3">Page ACA Modules - Control Module - Property ToolTip</note>
         </trans-unit>
-        <trans-unit id="Page 2561984934 - Control 2545948390 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Specifies the Category of the Module.</source>
-          <target state="translated">Gibt die Kategorie des Moduls an.</target>
-          <note from="Developer" annotates="general" priority="2"/>
-          <note from="Xliff Generator" annotates="general" priority="3">Page ACA Modules - Control ModuleCategory - Property ToolTip</note>
-        </trans-unit>
         <trans-unit id="Page 2561984934 - Control 4238567160 - Property 1064389655" size-unit="char" translate="yes" xml:space="preserve">
           <source>What is the module about</source>
           <target state="translated">Worum geht es bei dem Modul</target>
@@ -1521,6 +1875,12 @@
           <note from="Developer" annotates="general" priority="2"/>
           <note from="Xliff Generator" annotates="general" priority="3">Page ACA Modules - Action Disable - Property AboutTitle</note>
         </trans-unit>
+        <trans-unit id="Page 2561984934 - Action 4283638840 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>This action will disable the module if possible.</source>
+          <target state="translated">Diese Aktion deaktiviert das Modul, wenn dies möglich ist.</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page ACA Modules - Action Disable - Property ToolTip</note>
+        </trans-unit>
         <trans-unit id="Page 2561984934 - Action 4283638840 - Property 247559172" size-unit="char" translate="yes" xml:space="preserve">
           <source>It is possible to disable the module so that it is hidden throughout the application. In case you want it enabled again, just use the Enable Action</source>
           <target state="translated">Mit der Aktion kann ein Modul deaktiviert werden. Dadurch wird es in der gesamten Applikation ausgeblendet. Zum aktivieren kann die "Aktivieren" Aktion genutzt werden.</target>
@@ -1533,11 +1893,23 @@
           <note from="Developer" annotates="general" priority="2"/>
           <note from="Xliff Generator" annotates="general" priority="3">Page ACA Modules - Action Disable - Property Caption</note>
         </trans-unit>
+        <trans-unit id="Page 2561984934 - Action 3483044347 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>This action will enable the module and may also make necessary changes regarding the module.</source>
+          <target state="translated">Diese Aktion aktiviert das Modul. Es werden ebenfalls nötige Änderungen durchgeführt.</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page ACA Modules - Action Enable - Property ToolTip</note>
+        </trans-unit>
         <trans-unit id="Page 2561984934 - Action 3483044347 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Enable</source>
           <target state="translated">Aktivieren</target>
           <note from="Developer" annotates="general" priority="2"/>
           <note from="Xliff Generator" annotates="general" priority="3">Page ACA Modules - Action Enable - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2561984934 - Action 3238504282 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>This action will delete the module.</source>
+          <target state="translated">Diese Aktion löscht das Modul.</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page ACA Modules - Action Remove - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="Page 2561984934 - Action 3238504282 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Remove</source>
@@ -1551,17 +1923,47 @@
           <note from="Developer" annotates="general" priority="2"/>
           <note from="Xliff Generator" annotates="general" priority="3">Page ACA Req. Test Headers - Property Caption</note>
         </trans-unit>
+        <trans-unit id="Page 3263429843 - Control 2961552353 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>The Request Header Name.</source>
+          <target state="translated">Der Name der Anfrage.</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page ACA Req. Test Headers - Control Name - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 3263429843 - Control 1131619133 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>The Request Header Value.</source>
+          <target state="translated">Der Wert der Anfrage.</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page ACA Req. Test Headers - Control Value - Property ToolTip</note>
+        </trans-unit>
         <trans-unit id="Page 589929113 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Optional URI Parameters</source>
           <target state="translated">Optionale Url Parameter</target>
           <note from="Developer" annotates="general" priority="2"/>
           <note from="Xliff Generator" annotates="general" priority="3">Page ACA Req. Test URI Params - Property Caption</note>
         </trans-unit>
+        <trans-unit id="Page 589929113 - Control 2961552353 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>The URI Parameter Name.</source>
+          <target state="translated">Der Parameter Name der URI.</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page ACA Req. Test URI Params - Control Name - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 589929113 - Control 1131619133 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>The URI Parameter Value.</source>
+          <target state="translated">Der Parameter Wert der URI.</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page ACA Req. Test URI Params - Control Value - Property ToolTip</note>
+        </trans-unit>
         <trans-unit id="Page 938890024 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Azure Blob Storage Request Test Page</source>
           <target state="translated">Azure Blob Storage Test Page</target>
           <note from="Developer" annotates="general" priority="2"/>
           <note from="Xliff Generator" annotates="general" priority="3">Page ACA Request Test - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 938890024 - Control 1351956586 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>The API Action that should be executed.</source>
+          <target state="translated">Die API-Methode die ausgeführt werden soll.</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page ACA Request Test - Control APIAction - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="Page 938890024 - Control 1351956586 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>API Action</source>
@@ -1575,11 +1977,29 @@
           <note from="Developer" annotates="general" priority="2"/>
           <note from="Xliff Generator" annotates="general" priority="3">Page ACA Request Test - Control APIAction - Property OptionCaption</note>
         </trans-unit>
+        <trans-unit id="Page 938890024 - Control 2521344208 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>The Blob Storage Blob Name.</source>
+          <target state="translated">Der Name des Blobs.</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page ACA Request Test - Control BlobName - Property ToolTip</note>
+        </trans-unit>
         <trans-unit id="Page 938890024 - Control 2521344208 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Blob Name</source>
           <target state="translated">Blob Name</target>
           <note from="Developer" annotates="general" priority="2"/>
           <note from="Xliff Generator" annotates="general" priority="3">Page ACA Request Test - Control BlobName - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 938890024 - Control 3004954119 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>The Blob Storage Connection Code.</source>
+          <target state="translated">Der Verbindungscode zum Blob storage.</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page ACA Request Test - Control Code - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 938890024 - Control 2101801964 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>The Blob Storage Container Name.</source>
+          <target state="translated">Der Container name des Blob Storages.</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page ACA Request Test - Control ContainerName - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="Page 938890024 - Control 2101801964 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Container Name</source>
@@ -1587,17 +2007,35 @@
           <note from="Developer" annotates="general" priority="2"/>
           <note from="Xliff Generator" annotates="general" priority="3">Page ACA Request Test - Control ContainerName - Property Caption</note>
         </trans-unit>
+        <trans-unit id="Page 938890024 - Control 812349251 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>The generated URI that is invoked.</source>
+          <target state="translated">Die generierte URI, welche aufgerufen wird.</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page ACA Request Test - Control GeneratedURI - Property ToolTip</note>
+        </trans-unit>
         <trans-unit id="Page 938890024 - Control 812349251 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Generated URI</source>
           <target state="translated">Generierte Url</target>
           <note from="Developer" annotates="general" priority="2"/>
           <note from="Xliff Generator" annotates="general" priority="3">Page ACA Request Test - Control GeneratedURI - Property Caption</note>
         </trans-unit>
+        <trans-unit id="Page 938890024 - Control 889292200 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>The Result of the webrequest.</source>
+          <target state="translated">Das Ergebnis des Webrequests.</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page ACA Request Test - Control ResultText - Property ToolTip</note>
+        </trans-unit>
         <trans-unit id="Page 938890024 - Control 889292200 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Result</source>
           <target state="translated">Ergebnis</target>
           <note from="Developer" annotates="general" priority="2"/>
           <note from="Xliff Generator" annotates="general" priority="3">Page ACA Request Test - Control ResultText - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 938890024 - Action 1561766673 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Execute the request to the Blob Storage.</source>
+          <target state="translated">Führe die Anfrage zum Blob Storage aus.</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page ACA Request Test - Action Execute - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="Enum 2273170316 - EnumValue 3398022750 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Shared Access Signature</source>
@@ -1622,12 +2060,6 @@
           <target state="translated">Azure Dateifreigabe</target>
           <note from="Developer" annotates="general" priority="2"/>
           <note from="Xliff Generator" annotates="general" priority="3">Enum ACA Azure Connection Type - EnumValue File Share - Property Caption</note>
-        </trans-unit>
-        <trans-unit id="Enum 3232156411 - EnumValue 4294440508 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Unknown</source>
-          <target state="translated">Unbekannt</target>
-          <note from="Developer" annotates="general" priority="2"/>
-          <note from="Xliff Generator" annotates="general" priority="3">Enum ACA Module Category - EnumValue Unknown - Property Caption</note>
         </trans-unit>
       </group>
     </body>

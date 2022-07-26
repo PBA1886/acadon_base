@@ -20,10 +20,12 @@ page 5282622 "ACA Req. Test Headers"
                 field(Name; Rec.Name)
                 {
                     ApplicationArea = All;
+                    ToolTip = 'The Request Header Name.';
                 }
                 field(Value; Rec.Value)
                 {
                     ApplicationArea = All;
+                    ToolTip = 'The Request Header Value.';
                 }
             }
         }
