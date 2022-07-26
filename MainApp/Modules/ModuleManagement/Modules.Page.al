@@ -59,6 +59,7 @@ page 5282617 "ACA Modules"
             action(Enable)
             {
                 Caption = 'Enable';
+                ToolTip = 'This action will enable the module and may also make necessary changes regarding the module.';
                 Image = Start;
                 ApplicationArea = All;
                 Enabled = EnableEnabled;
@@ -74,6 +75,7 @@ page 5282617 "ACA Modules"
             action(Disable)
             {
                 Caption = 'Disable';
+                ToolTip = 'This action will disable the module if possible.';
                 Image = Stop;
                 ApplicationArea = All;
                 Enabled = DisableEnabled;
@@ -91,6 +93,7 @@ page 5282617 "ACA Modules"
             action(Remove)
             {
                 Caption = 'Remove';
+                ToolTip = 'This action will delete the module.';
                 Image = Delete;
                 ApplicationArea = All;
                 Visible = IsUnknownModule;

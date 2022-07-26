@@ -20,10 +20,12 @@ page 5282621 "ACA Req. Test URI Params"
                 field(Name; Rec.Name)
                 {
                     ApplicationArea = All;
+                    ToolTip = 'The URI Parameter Name.';
                 }
                 field(Value; Rec.Value)
                 {
                     ApplicationArea = All;
+                    ToolTip = 'The URI Parameter Value.';
                 }
             }
         }
