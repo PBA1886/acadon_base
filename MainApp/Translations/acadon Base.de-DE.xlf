@@ -496,8 +496,8 @@
           <note from="Xliff Generator" annotates="general" priority="3">Codeunit ACA License Management - Method OnRun - NamedType AppWithIDNotFoundErr</note>
         </trans-unit>
         <trans-unit id="Codeunit 3607768333 - Method 1665861916 - NamedType 154637739" size-unit="char" translate="yes" xml:space="preserve">
-          <source>The Test Period for the app "%1" with ID "%2" is expired. Please contact acadon AG if you further want to use the app or uninstall the app.</source>
-          <target>Der Testzeitraum für die App "%1" mit der ID "%2" ist abgelaufen. Bitte kontaktieren Sie die acadon AG, wenn Sie die App weiter nutzen möchten oder deinstallieren Sie die App.</target>
+          <source>The Test Period for the app "%1" is expired. Please contact acadon AG if you further want to use the app or uninstall the app.</source>
+          <target>Der Testzeitraum für die App "%1" ist abgelaufen. Bitte kontaktieren Sie die acadon AG, wenn Sie die App weiter nutzen möchten oder deinstallieren Sie die App.</target>
           <note from="Developer" annotates="general" priority="2">%1 = AppName, %2 = AppId</note>
           <note from="Xliff Generator" annotates="general" priority="3">Codeunit ACA License Management - Method OnRun - NamedType LicenseExpiredErr</note>
         </trans-unit>
