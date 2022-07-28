@@ -64,30 +64,6 @@ codeunit 5282619 "ACA License Management"
         exit(RemainingDaysOfTestPeriod < 0);
     end;
 
-    procedure CreateNotification(Results: Dictionary of [Text, Text]; MinRemainingDays: Integer) LicenseNotification: Notification
-    var
-        AppInfo: ModuleInfo;
-        RemainingDays: Integer;
-        RemainingDaysText: Text;
-        AppIDText: Text;
-        NotificationMsg: Label 'The Test Period for the App "%1" will expire in %2 days. If you further want to use the app, please contact acadon AG.', Comment = '%1 = App Name, %2 = Remaining Days';
-    begin
-        if not Results.Get('AppID', AppIDText) then
-            exit;
-        if not NavApp.GetModuleInfo(AppIDText, AppInfo) then
-            exit;
-
-        if not Results.Get('RemainingDays', RemainingDaysText) then
-            exit;
-        if not Evaluate(RemainingDays, RemainingDaysText) then
-            exit;
-
-        if RemainingDays > MinRemainingDays then
-            exit;
-
-        LicenseNotification.Message(StrSubstNo(NotificationMsg, AppInfo.Name, RemainingDaysText));
-    end;
-
     local procedure LicenseCheckNeeded(): Boolean
     var
         EnvironmentInfo: Codeunit "Environment Information";
