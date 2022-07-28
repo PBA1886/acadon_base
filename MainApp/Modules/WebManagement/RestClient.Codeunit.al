@@ -16,9 +16,7 @@ codeunit 5282620 "ACA Rest Client"
         IsHandled: Boolean;
     begin
         OnBeforeSendRequest(Method, Url, RequestObject, ResponseMessage, ResponseToken, Successful, IsHandled);
-
         DoSendRequest(Method, Url, RequestObject, ResponseMessage, ResponseToken, Successful, IsHandled);
-
         OnAfterSendRequest(Method, Url, RequestObject, ResponseMessage, ResponseToken, Successful);
     end;
 

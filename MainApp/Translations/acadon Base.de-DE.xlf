@@ -477,6 +477,30 @@
           <note from="Developer" annotates="general" priority="2"/>
           <note from="Xliff Generator" annotates="general" priority="3">Codeunit ACA Helper Library - Method GetXmlDocumentFromResponse - NamedType ReadingAsXmlErr</note>
         </trans-unit>
+        <trans-unit id="Codeunit 3607768333 - Method 559587107 - NamedType 1304771032" size-unit="char" translate="yes" xml:space="preserve">
+          <source>The Test Period for the App "%1" will expire in %2 days. If you further want to use the app, please contact acadon AG.</source>
+          <target>Der Testzeitraum für die App "%1" wird in %2 Tagen ablaufen. Wenn Sie die App weiterhin nutzen möchten, wenden Sie sich bitte an die acadon AG.</target>
+          <note from="Developer" annotates="general" priority="2">%1 = App Name, %2 = Remaining Days</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit ACA License Management - Method CreateNotification - NamedType NotificationMsg</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 3607768333 - Method 1665861916 - NamedType 795511881" size-unit="char" translate="yes" xml:space="preserve">
+          <source>The license check for an acadon AG app could not be executed. The parameter "AppID" is missing.</source>
+          <target>Die Lizenzprüfung einer App von der acadon AG konnte nicht ausgeführt werden. Der Parameter "AppID" fehlt.</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit ACA License Management - Method OnRun - NamedType BackgroundTaskParameterAppIDMissingErr</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 3607768333 - Method 1665861916 - NamedType 2605122604" size-unit="char" translate="yes" xml:space="preserve">
+          <source>The app with the id: "%1" is not found.</source>
+          <target>Die App mit der id: "%1" wurde nicht gefunden.</target>
+          <note from="Developer" annotates="general" priority="2">%1 = AppId</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit ACA License Management - Method OnRun - NamedType AppWithIDNotFoundErr</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 3607768333 - Method 1665861916 - NamedType 154637739" size-unit="char" translate="yes" xml:space="preserve">
+          <source>The Test Period for the app "%1" with ID "%2" is expired. Please contact acadon AG if you further want to use the app or uninstall the app.</source>
+          <target>Der Testzeitraum für die App "%1" mit der ID "%2" ist abgelaufen. Bitte kontaktieren Sie die acadon AG, wenn Sie die App weiter nutzen möchten oder deinstallieren Sie die App.</target>
+          <note from="Developer" annotates="general" priority="2">%1 = AppName, %2 = AppId</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit ACA License Management - Method OnRun - NamedType LicenseExpiredErr</note>
+        </trans-unit>
         <trans-unit id="Codeunit 2315710366 - Method 4283638840 - NamedType 3169974684" size-unit="char" translate="yes" xml:space="preserve">
           <source>Do you want to disable Module %1?</source>
           <target state="translated">Möchten Sie das Modul %1 deaktivieren?</target>

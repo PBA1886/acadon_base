@@ -25,33 +25,69 @@ codeunit 5282621 "ACA Json Management"
     end;
 
     procedure GetValueAsBoolean(JsonPropertyName: Text; Object: JsonObject): Boolean
+    var
+        "Value": JsonValue;
     begin
-        exit(GetValue(JsonPropertyName, Object).AsBoolean());
+        Value := GetValue(JsonPropertyName, Object);
+        if Value.IsNull() or Value.IsUndefined() then
+            exit;
+
+        exit(Value.AsBoolean());
     end;
 
     procedure GetValueAsInteger(JsonPropertyName: Text; Object: JsonObject): Integer
+    var
+        "Value": JsonValue;
     begin
-        exit(GetValue(JsonPropertyName, Object).AsInteger());
+        Value := GetValue(JsonPropertyName, Object);
+        if Value.IsNull() or Value.IsUndefined() then
+            exit;
+
+        exit(Value.AsInteger());
     end;
 
     procedure GetValueAsDecimal(JsonPropertyName: Text; Object: JsonObject): Decimal
+    var
+        Value: JsonValue;
     begin
-        exit(GetValue(JsonPropertyName, Object).AsDecimal());
+        Value := GetValue(JsonPropertyName, Object);
+        if Value.IsNull() or Value.IsUndefined() then
+            exit;
+
+        exit(Value.AsDecimal());
     end;
 
     procedure GetValueAsDate(JsonPropertyName: Text; Object: JsonObject): Date
+    var
+        "Value": JsonValue;
     begin
-        exit(DT2Date(GetValueAsDateTime(JsonPropertyName, Object)));
+        Value := GetValue(JsonPropertyName, Object);
+        if Value.IsNull() or Value.IsUndefined() then
+            exit;
+
+        exit(Value.AsDate());
     end;
 
     procedure GetValueAsDateTime(JsonPropertyName: Text; Object: JsonObject): DateTime
+    var
+        "Value": JsonValue;
     begin
-        exit(GetValue(JsonPropertyName, Object).AsDateTime());
+        Value := GetValue(JsonPropertyName, Object);
+        if Value.IsNull() or Value.IsUndefined() then
+            exit;
+
+        exit(Value.AsDateTime());
     end;
 
     procedure GetValueAsText(JsonPropertyName: Text; Object: JsonObject): Text
+    var
+        "Value": JsonValue;
     begin
-        exit(GetValue(JsonPropertyName, Object).AsText());
+        Value := GetValue(JsonPropertyName, Object);
+        if Value.IsNull() or Value.IsUndefined() then
+            exit;
+
+        exit(Value.AsText());
     end;
 
 }
