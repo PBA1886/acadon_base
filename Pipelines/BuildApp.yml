@@ -21,3 +21,4 @@ extends:
   template: Templates/BuildApp.yml@timberbuildhelper
   parameters:
     DownloadTimberApps: false
+    SignApp: true
